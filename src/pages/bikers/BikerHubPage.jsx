@@ -105,7 +105,7 @@ const BikerHubPage = ({ openBooking }) => {
             <div 
                 className="fixed inset-0 z-0 pointer-events-none opacity-10 grayscale contrast-125"
                 style={{ 
-                    backgroundImage: 'url("/images/biker-friendly-accommodation-bosnia.webpground.webp")',
+                    backgroundImage: 'url("/images/bikers-bosnia-auto-camp-drina.webp")',
                     backgroundPosition: 'right center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
