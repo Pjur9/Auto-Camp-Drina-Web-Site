@@ -8,27 +8,47 @@ import {
 import { SITE_DATA } from '../../entities/general/model/site-data';
 import { Modal } from '../../shared/ui/Modal';
 
+// Mapa svih naših lokalizovanih URL-ova
+const ROUTE_MAP = {
+  home:     { en: '/en', sr: '/sr', de: '/de' },
+  rafting:  { en: '/en/rafting', sr: '/sr/rafting', de: '/de/rafting' },
+  hiking:   { en: '/en/hiking', sr: '/sr/planinarenje', de: '/de/wandern' },
+  camping:  { en: '/en/camping', sr: '/sr/kampovanje', de: '/de/camping' },
+  multiday: { en: '/en/multiday', sr: '/sr/visednevni', de: '/de/mehrtagestouren' },
+  aboutus:  { en: '/en/aboutus', sr: '/sr/o-nama', de: '/de/ueber-uns' },
+  bikerhub: { en: '/en/bikerhub', sr: '/sr/motociklisti', de: '/de/motorrad' },
+  faq:      { en: '/en/faq', sr: '/sr/faq', de: '/de/faq' }
+};
+
+// Pomoćna funkcija koja prepoznaje "ključ" stranice na osnovu URL-a
+const getCurrentPageKey = (pathname) => {
+  if (pathname === '/en' || pathname === '/sr' || pathname === '/de' || pathname === '/') return 'home';
+  for (const [key, paths] of Object.entries(ROUTE_MAP)) {
+    if (Object.values(paths).includes(pathname)) return key;
+  }
+  return 'home';
+};
+
 const MAP_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172935.53986968038!2d18.78243169632078!3d43.52932904551514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f10.1!3m3!1m2!1s0x47588699d986a259%3A0xdd76035a7578cabc!2z0JDRg9GC0L4g0LrQsNC80L8g0JTRgNC40L3QsA!5e1!3m2!1ssr!2srs!4v1764768923132!5m2!1ssr!2srs";
 const MAP_EXTERNAL_URL = "https://maps.app.goo.gl/ge6rfzNqGmDEAAaH8";
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
   const { lang } = useParams();
 
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [copiedType, setCopiedType] = useState(null);
 
-  const pathSegments = pathname.split('/').filter(Boolean);
-  const activePage = pathSegments[1] || 'home';
-  const isBikerPage = activePage === 'bikerhub';
+  // Određujemo tačan jezik i ključ trenutne stranice
+  const currentLang = lang || i18n.language || 'en';
+  const currentPageKey = getCurrentPageKey(pathname);
+  const isBikerPage = currentPageKey === 'bikerhub';
 
   const themeBg = isBikerPage ? 'bg-[#1c1917]' : 'bg-primary-dark';
   const themeAccentText = isBikerPage ? 'text-accent' : 'text-secondary';
   const themeBorder = isBikerPage ? 'border-stone-800' : 'border-gray-800';
   const themeHighlight = isBikerPage ? 'hover:border-accent' : 'hover:border-secondary';
-
-  const getPath = (pagePath) => pagePath === 'home' || pagePath === '' ? `/${lang}` : `/${lang}/${pagePath}`;
 
   const handleCopy = (text, type) => {
     navigator.clipboard.writeText(text);
@@ -42,8 +62,8 @@ export const Footer = () => {
         
         <div className="col-span-1 flex flex-col items-center lg:items-start">
           <Link 
-            to={getPath('')}
-            onClick={() => { if (pathname === getPath('')) window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            to={ROUTE_MAP['home'][currentLang]}
+            onClick={() => { if (currentPageKey === 'home') window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             className="text-2xl font-bold font-['Montserrat'] mb-4 flex items-center gap-2 cursor-pointer" 
           >
             <Waves className={themeAccentText} /> AC DRINA
@@ -64,10 +84,10 @@ export const Footer = () => {
             {t('footer.quickLinks')}
           </h3>
           <ul className="space-y-3 text-gray-300 text-sm">
-            <FooterLink to={getPath('')} currentPath={pathname} label={t('navbar.home')} />
-            <FooterLink to={getPath('rafting')} currentPath={pathname} label={t('navbar.rafting')} />
-            <FooterLink to={getPath('hiking')} currentPath={pathname} label={t('navbar.hiking')} />
-            <FooterLink to={getPath('multiday')} currentPath={pathname} label={t('navbar.multiday')} />
+            <FooterLink to={ROUTE_MAP['home'][currentLang]} currentPath={pathname} label={t('navbar.home')} />
+            <FooterLink to={ROUTE_MAP['rafting'][currentLang]} currentPath={pathname} label={t('navbar.rafting')} />
+            <FooterLink to={ROUTE_MAP['hiking'][currentLang]} currentPath={pathname} label={t('navbar.hiking')} />
+            <FooterLink to={ROUTE_MAP['multiday'][currentLang]} currentPath={pathname} label={t('navbar.multiday')} />
           </ul>
         </div>
 
@@ -76,10 +96,10 @@ export const Footer = () => {
             {t('footer.explore')}
           </h3>
           <ul className="space-y-3 text-gray-300 text-sm">
-            <FooterLink to={getPath('camping')} currentPath={pathname} label={t('navbar.camping')} />
-            <FooterLink to={getPath('aboutus')} currentPath={pathname} label={t('navbar.aboutus')} />
-            <FooterLink to={getPath('bikerhub')} currentPath={pathname} label={t('navbar.bikerhub')} />
-            <FooterLink to={getPath('faq')} currentPath={pathname} label={t('navbar.faq')} />
+            <FooterLink to={ROUTE_MAP['camping'][currentLang]} currentPath={pathname} label={t('navbar.camping')} />
+            <FooterLink to={ROUTE_MAP['aboutus'][currentLang]} currentPath={pathname} label={t('navbar.aboutus')} />
+            <FooterLink to={ROUTE_MAP['bikerhub'][currentLang]} currentPath={pathname} label={t('navbar.bikerhub')} />
+            <FooterLink to={ROUTE_MAP['faq'][currentLang]} currentPath={pathname} label={t('navbar.faq')} />
           </ul>
         </div>
 
