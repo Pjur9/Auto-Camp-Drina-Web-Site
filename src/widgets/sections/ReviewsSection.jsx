@@ -48,7 +48,7 @@ export const ReviewsSection = () => {
   return (
     <section 
       className="relative py-20 flex items-center bg-fixed bg-cover bg-center overflow-hidden" 
-      style={{ backgroundImage: 'url("/images/mountain-top.webp")' }}
+      style={{ backgroundImage: 'url("/images/hiking-bosnia-mountain-camp.webp")' }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -69,7 +69,13 @@ export const ReviewsSection = () => {
           <div className="flex-1 max-w-4xl mx-auto px-4 overflow-hidden flex flex-col">
             
             <div className="mb-8 animate-pulse flex-none">
-              <Star size={48} className="mx-auto text-accent" strokeWidth={1.5} />
+              <div className="flex items-center justify-center gap-4 md:gap-8 mb-12 flex-none opacity-90">
+                <div className="h-[1px] w-8 md:w-24 bg-gradient-to-r from-transparent to-accent"></div>
+                  <span className="text-accent text-2xl md:text-4xl font-black font-['Montserrat'] tracking-[0.5em] uppercase leading-none pl-[0.5em]">
+                    Reviews
+                  </span>
+                <div className="h-[1px] w-8 md:w-24 bg-gradient-to-l from-transparent to-accent"></div>
+              </div>
             </div>
             
             <div key={currentReview} className="animate-fade-in-up flex flex-col">

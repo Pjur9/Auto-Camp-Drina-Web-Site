@@ -44,7 +44,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
         { 
             day: 1, 
             icon: Sun, 
-            image: "/images/autoriverside-camping-drina-bosnia.webp",
+            image: "/images/auto-camp-drina-aerial-view.webp",
             meals: ['dinner'],
             activeBorder: "border-slate-800", 
             badgeStyle: "bg-slate-100 text-slate-700 border-slate-200",
@@ -364,7 +364,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
                         <div className="lg:col-span-6 relative group min-h-[500px]">
                             <div className="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
                                 <img 
-                                    src="/images/scouts.webp" 
+                                    src="/images/scout-group-camping.webp" 
                                     alt="Scouting at Drina" 
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
