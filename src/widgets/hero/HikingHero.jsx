@@ -25,11 +25,11 @@ export const HikingHero = () => {
           {t('hikingHero.title')}
         </h1>
         
-        <p className="text-base md:text-xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto text-gray-200">
+        <h2 className="text-base md:text-xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto text-gray-200">
           <Trans i18nKey="hikingHero.description">
             <strong className="text-secondary"></strong>
           </Trans>
-        </p> 
+        </h2> 
         
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 border-t border-white/20 pt-8 mt-8">
           <StatItem value="2386m" label={t('hikingHero.stats.maglic')} />

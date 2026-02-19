@@ -88,9 +88,9 @@ export const HomeHero = ({ openBooking }) => {
             <h1 className="font-bold text-white mb-4 font-['Montserrat'] leading-tight drop-shadow-2xl text-center" style={{ fontSize: 'clamp(1.75rem, 8vw, 4.5rem)' }}>
                 {slides[currentSlide].title}
             </h1>
-            <p className="text-gray-100 text-sm sm:text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md text-center line-clamp-6 md:line-clamp-none">
+            <h2 className="text-gray-100 text-sm sm:text-xl md:text-2xl max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md text-center line-clamp-6 md:line-clamp-none">
                 {slides[currentSlide].text}
-            </p>
+            </h2>
         </div>
 
         <div className="pointer-events-auto z-20 flex flex-col gap-4 w-full items-center flex-none mb-4">

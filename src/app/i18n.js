@@ -258,9 +258,9 @@ const resources = {
         subtitle: "From short adrenaline trips to multi-day expeditions - we have a package for everyone."
       },
       raftingHero: {
-        tag: "Welcome to Tara Canyon",
-        title: "Discover the \"Tear of Europe\"",
-        description: "Imagine a place where time stops, and nature speaks the language of eternity. The Tara River Canyon is not just a geographical term – it is a sanctuary of wilderness carved into the heart of the Balkans. With a depth reaching a dizzying 1300 meters, this is the <0>deepest canyon in Europe</0> and the second in the world. Its turquoise water, so pure that you can drink it directly from your palm along its entire course, winds through ancient black pine forests and high cliffs that have kept secrets for centuries.",
+        tag: "Unforgettable Experience", 
+          title: "Tara River Rafting - The Ultimate Bosnia Adventure",
+          description: "Experience the most thrilling Tara rafting tour from Foca. Licensed guides, premium gear, and an unforgettable ride through <1>Europe's deepest canyon</1>.",
         features: {
             tradition: { title: "Tradition since 1987", text: "We proudly hold the title of the first registered private rafting camp in BiH. Decades of experience are our guarantee." },
             safety: { title: "100% Safety", text: "Your safety is our imperative. Licensed IRF skippers and top-quality, certified equipment ensure a safe adventure." },
@@ -274,8 +274,8 @@ const resources = {
       },
       hikingHero: {
         tag: "Sutjeska National Park",
-        title: "Step Above the Clouds",
-        description: "Conquer Maglić, the highest peak of Bosnia and Herzegovina. Reflect in the emerald <1>Trnovačko Lake</1>. Explore <2>Perućica</2>, one of the last rainforests in Europe. This is not just a walk – this is a pilgrimage to nature.",
+          title: "Hiking Maglic & Sutjeska National Park",
+          description: "Conquer <1>Maglic, the highest peak in Bosnia</1>, and explore Perucica forest. Guided hiking tours and expeditions from Auto Camp Drina.",
         stats: {
             maglic: "Maglić Peak",
             lakes: "Glacial Lakes",
@@ -339,16 +339,16 @@ const resources = {
         }
       },
       campingHero: {
-        tag: "Oasis of Peace on the Drina Bank",
-        title: "Waking Up to the River Roar",
-        text: "Forget city noise. At Auto Camp Drina, your alarm is birdsong, and the view from the window is the emerald water of Drina."
+        tag: "Nature Retreat",
+        title: "Camping Drina - Riverside Bungalows & Nature Camp",
+        text: "Auto Camp Drina offers authentic riverside camping, cozy wooden bungalows, and RV pitches in Foca, perfect for your Tara rafting holiday in Bosnia."
       },
       // --- ABOUT US PAGE (NOVO) ---
       aboutHero: {
-        tag: "Founded in 1987.",
-        title: "More Than a Camp.",
-        highlight: "Family.",
-        text: "Auto Camp 'Drina' is not just a place on a map. It is a home where guests return as friends. We are the first registered private rafting camp in BiH, and our mission has been the same for almost 40 years: unforgettable adventure and sincere hospitality."
+        tag: "Tradition",
+          title: "Auto Camp Drina -",
+          highlight: "The First Rafting Camp on Tara & Drina",
+          text: "Tradition since 1987. The oldest and most trusted center for Tara river rafting and camping in Foca, Bosnia and Herzegovina."
       },
       aboutUsPage: {
         story1: {
@@ -459,9 +459,9 @@ const resources = {
       },
       "multiDay": {
         "hero": {
-          "tagline": "Extended Experience",
-          "title": "More Days, More Memories",
-          "subtitle": "Surrender to the rhythm of the wild. From rushing Tara rapids and conquering peaks to the silence of the canyon and starlit campfires. This isn't just a vacation, it's a return to your roots where every trail writes a story for a lifetime."
+            tagline: "Best of Both Worlds",
+            title: "Multi-Day Tours - Rafting, Hiking & Camping",
+            subtitle: "Combine Tara river rafting and Sutjeska national park hiking. All-inclusive adventure packages in Bosnia with accommodation and local food."
         },
         "package5day": {
           "title": "THE ULTIMATE",
@@ -1186,8 +1186,8 @@ const resources = {
       },
       raftingHero: {
         tag: "Dobrodošli u Kanjon Tare",
-        title: "Otkrijte \"Suzu Evrope\"",
-        description: "Zamislite mjesto gdje vrijeme staje, a priroda govori jezikom vječnosti. Kanjon rijeke Tare nije samo geografski pojam – to je svetište divljine uklesano u srce Balkana. Sa dubinom koja doseže vrtoglavih 1300 metara, ovo je <0>najdublji kanjon u Evropi</0> i drugi u svijetu. Njena tirkizna voda, toliko čista da je možete piti direktno iz dlana cijelim njenim tokom, vijuga kroz drevne šume crnog bora i visoke litice koje čuvaju tajne vijekovima.",
+        title: "Rafting Tara - Najbolja Avantura u Bosni i Hercegovini",
+          description: "Iskusite najuzbudljiviji rafting Tarom i Drinom iz Foče. Licencirani skiperi, vrhunska oprema i nezaboravan spust kroz <1>najdublji kanjon u Evropi</1>.",
         features: {
             tradition: { title: "Tradicija od 1987", text: "Ponosno nosimo titulu prvog registrovanog privatnog rafting kampa u BiH. Decenije iskustva su naša garancija." },
             safety: { title: "Sigurnost 100%", text: "Vaša sigurnost je naš imperativ. Licencirani IRF skiperi i vrhunska, atestirana oprema osiguravaju bezbjednu avanturu." },
@@ -1201,8 +1201,8 @@ const resources = {
       },
       hikingHero: {
         tag: "Nacionalni Park Sutjeska",
-        title: "Korak Iznad Oblaka",
-        description: "Osvojite Maglić, najviši vrh Bosne i Hercegovine. Ogledajte se u smaragdnom <1>Trnovačkom jezeru</1>. Istražite <2>Perućicu</2>, jednu od posljednjih prašuma Evrope. Ovo nije samo šetnja – ovo je hodočašće prirodi.",
+        title: "Planinarenje Maglić i NP Sutjeska",
+          description: "Osvojite <1>Maglić, najviši vrh BiH</1>, i istražite prašumu Perućicu. Planinarske ture i hiking ekspedicije iz Auto kampa Drina.",
         stats: {
             maglic: "Vrh Maglića",
             lakes: "Glečerskih Jezera",
@@ -1266,16 +1266,16 @@ const resources = {
         }
       },
       campingHero: {
-        tag: "Oaza Mira na Obali Drine",
-        title: "Buđenje uz Huk Rijeke",
-        text: "Zaboravite na gradsku buku. U Auto Kampu Drina, vaš alarm je pjev ptica, a pogled s prozora je smaragdna voda Drine."
+        tag: "Odmor u prirodi",
+          title: "Kampovanje Drina - Smještaj i Bungalovi Foča",
+          text: "Auto kamp Drina nudi autentično kampovanje na obali rijeke, udobne drvene bungalove i parcele za šatore i kampere, idealno za vaš rafting odmor u prirodi."
       },
       // --- ABOUT US PAGE (NOVO) ---
       aboutHero: {
-        tag: "Osnovano 1987.",
-        title: "Više od Kampa.",
-        highlight: "Porodica.",
-        text: "Auto Camp 'Drina' nije samo mjesto na mapi. To je dom gdje se gosti vraćaju kao prijatelji. Prvi smo registrovani privatni rafting kamp u BiH, a naša misija je ista već skoro 40 godina: nezaboravna avantura i iskreno gostoprimstvo."
+       tag: "Tradicija",
+          title: "Auto Kamp Drina -",
+          highlight: "Prvi Rafting Kamp na Tari i Drini",
+          text: "Tradicija od 1987. godine. Najstariji i najpouzdaniji centar za rafting Tarom i kampovanje u Foči, Bosna i Hercegovina."
       },
       aboutUsPage: {
         story1: {
@@ -1386,10 +1386,10 @@ const resources = {
       },
       "multiDay": {
         "hero": {
-          "tagline": "Produženo Iskustvo",
-          "title": "Više dana, više uspomena",
-          "subtitle": "Prepustite se ritmu divljine. Od juriša kroz brzake Tare i osvajanja vrhova, do tišine kanjona i vatre pod zvijezdama. Ovo nije samo odmor, već povratak korijenima gdje svaka staza piše priču za čitav život."
-        },
+            tagline: "Najbolje od oba svijeta",
+            title: "Višednevne Ture - Rafting, Hiking i Kampovanje",
+            subtitle: "Kombinujte rafting na Tari i planinarenje u NP Sutjeska. All-inclusive avanturistički paketi u Bosni sa smještajem i domaćom hranom."
+          },
         "package5day": {
           "title": "ULTIMATIVNA",
           "title_highlight": "EKSPEDICIJA",

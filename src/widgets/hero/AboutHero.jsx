@@ -25,9 +25,9 @@ export const AboutHero = () => {
           <span className="text-accent">{t('aboutHero.highlight')}</span>
         </h1>
         
-        <p className="text-base md:text-xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto text-gray-200">
+        <h2 className="text-base md:text-xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto text-gray-200">
           {t('aboutHero.text')}
-        </p>
+        </h2>
       </div>
     </section>
   );
