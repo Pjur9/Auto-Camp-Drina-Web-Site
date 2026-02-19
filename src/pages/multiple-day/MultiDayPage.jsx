@@ -44,7 +44,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
         { 
             day: 1, 
             icon: Sun, 
-            image: "/images/autocamp.webp",
+            image: "/images/autoriverside-camping-drina-bosnia.webp",
             meals: ['dinner'],
             activeBorder: "border-slate-800", 
             badgeStyle: "bg-slate-100 text-slate-700 border-slate-200",
@@ -64,7 +64,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
         { 
             day: 3, 
             icon: Mountain, 
-            image: "/images/trnovacko.webp",
+            image: "/images/trnovacko-jezero-hiking-tara.webp",
             meals: ['breakfast', 'lunch_pack', 'dinner'],
             activeBorder: "border-emerald-600", 
             badgeStyle: "bg-emerald-100 text-emerald-700 border-emerald-200",
@@ -74,7 +74,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
         { 
             day: 4, 
             icon: Zap, 
-            image: "/images/canyoning.webp",
+            image: "/images/canyoning-hrcavka-adventure-bosnia.webp",
             meals: ['breakfast', 'dinner'],
             activeBorder: "border-orange-500", 
             badgeStyle: "bg-orange-100 text-orange-700 border-orange-200",
@@ -94,7 +94,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
         { 
             day: 6, 
             icon: ArrowRight, 
-            image: "/images/camp.webp",
+            image: "/images/riverside-camping-drina-bosnia.webp",
             meals: ['breakfast'],
             activeBorder: "border-indigo-500", 
             badgeStyle: "bg-indigo-100 text-indigo-700 border-indigo-200",
@@ -228,7 +228,7 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
 
             <section 
                 className="py-16 md:py-24 relative bg-fixed bg-cover bg-center"
-                style={{ backgroundImage: 'url("/images/maglic-mountain.webp")' }}
+                style={{ backgroundImage: 'url("/images/planinarenje-maglic-sutjeska.webp")' }}
             >
                 <div className="absolute inset-0 bg-primary/85 md:bg-primary/90"></div>
                 

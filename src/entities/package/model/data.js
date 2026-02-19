@@ -7,7 +7,7 @@ export const RAFTING_PACKAGES = [
         difficulty: "Srednje",
         description: "Idealan izbor za one u prolazu! Doživite uzbuđenje Tare i uživajte u tradicionalnom ručku. Brzo, intenzivno i nezaboravno.",
         features: ["1x Obrok (Ručak)", "Bez noćenja", "Sva oprema & Prevoz", "Osiguranje uključeno"],
-        image: "/images/raft-drina.webp",
+        image: "/images/scenic-drina-river-rafting.webp",
         fullItinerary: [
             "Okupljanje grupe u dogovoreno vrijeme između učesnika i organizatora.",
             "Zaduživanje opreme: Svaki učesnik dobija neoprensko odijelo, čizme i prsluk.",
@@ -73,7 +73,7 @@ export const RAFTING_PACKAGES = [
         difficulty: "Srednje",
         description: "Pravi bijeg od stvarnosti. Dva noćenja u prirodi, četiri obroka i rafting avantura. Savršen vikend paket za punjenje baterija.",
         features: ["4x Obroka", "2x Noćenja", "Kompletna oprema", "Osiguranje uključeno"],
-        image: "/images/auto-camp-drina.webp",
+        image: "/images/about-auto-camp-drina-foca.webp",
         fullItinerary: [
             "DAN 1:",
             "Dolazak u kamp u popodnevnim satima i smještaj.",
@@ -98,7 +98,7 @@ export const RAFTING_PACKAGES = [
         difficulty: "Teško",
         description: "Ekskluzivna kombinacija Raftinga i Hikinga! Istražite prašumu Perućicu i kanjon Tare. 5 obroka i 2 noćenja za totalni hedonizam.",
         features: ["5x Obroka", "2x Noćenja", "Posjeta prašumi Perućica", "Rafting avantura"],
-        image: "/images/rafting-about-us.webp",
+        image: "/images/adventure-center-drina-team.webp",
         fullItinerary: [
             "DAN 1:",
             "Dolazak u kamp u popodnevnim satima i smještaj.",
@@ -125,7 +125,7 @@ export const HIKING_TOURS = [
         duration: "4h",
         level: "Srednje",
         description: "Scenic hike duž ivice 1000m dubokog kanjona. Polazak off-road vozilom.",
-        image: "/images/hiking-kanjon-tare.webp",
+        image: "/images/tara-river-canyon-hiking.webp",
         details: ["Polazak: 08:00h Off-road vozilom", "Trajanje hikinga: 4h", "Pogled na Durmitor i Pivu"]
     },
     {
@@ -134,7 +134,7 @@ export const HIKING_TOURS = [
         duration: "4h",
         level: "Srednje",
         description: "Planinarenje do jezera u obliku srca (Maglić/Volujak). Moguće kupanje.",
-        image: "/images/trnovacko.webp",
+        image: "/images/trnovacko-jezero-hiking-tara.webp",
         details: ["Polazak: 08:00h do Prijevora (1668m)", "Trajanje hikinga: 4h", "Plivanje u alpskom jezeru"]
     },
     {
@@ -170,7 +170,7 @@ export const HIKING_TOURS = [
         duration: "3h",
         level: "Lako",
         description: "Lagana tura sa pogledom na kanjone, Perućicu, Maglić i Volujak planine.",
-        image: "/images/donje-bare.webp",
+        image: "/images/zelengora-planinska-jezera.webp",
         details: ["Polazak: 09:00h prema Zelengora jezerima", "Trajanje hikinga: 3h", "Pogledi na Maglić i Volujak"]
     },
 ];

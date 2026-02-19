@@ -159,7 +159,7 @@ const resources = {
           },
           {
             id: 2,
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             title: "Perućica Rainforest and Waterfall Skakavac",
             text: "Step into the heart of one of the last preserved rainforests in Europe, home to the Skakavac waterfall."
           },
@@ -389,7 +389,7 @@ const resources = {
             id: 1,
             name: "Filip Vujičić",
             role: "Manager & Lead Guide",
-            image: "/images/fica-skiper.webp",
+            image: "/images/tara-rafting-guide-fica.webp",
             desc: "Filip has been the heart of Camp Drina since the age of 12, growing up within this cherished family business. As Manager, he oversees every detail of the guest experience, personally hosting visitors to ensure a warm, seamless stay. ​Beyond the campsite walls, Filip is a professional rafting and hiking guide, blending his deep local knowledge with a passion for adventure. Whether he’s managing logistics or leading a tour, Filip is always on hand to provide a professional, hands-on touch to your journey.",
             experience: "10 Years Experience",
             specialty: "Wild Waters"
@@ -398,7 +398,7 @@ const resources = {
             id: 2,
             name: "Jovo",
             role: "Lead Climbing & Hiking Guide",
-            image: "/images/jovo.webp",
+            image: "/images/hiking-mountain-guide.webp",
             desc: "The master of heights and hidden mountain trails. Jovo leads you safely to the most stunning viewpoints of the Dinaric Alps. His expertise in climbing and deep passion for the wilderness turn every hike into a legendary story.",
             experience: "7 Years Experience",
             specialty: "Mountain Peaks"
@@ -407,7 +407,7 @@ const resources = {
             id: 3,
             name: "David",
             role: "Head Skipper",
-            image: "/images/baki-skiper.webp",
+            image: "/images/tara-rafting-guide-baki.webp",
             desc: "Our head skipper and the engine of the team. He is in charge of top-tier fun, and his adventurous spirit will make you experience every wave in a completely new way.",
             experience: "8 Years Experience",
             specialty: "Good Vibes"
@@ -416,7 +416,7 @@ const resources = {
             id: 4,
             name: "Nedeljko",
             role: "Skipper",
-            image: "/images/djone.webp",
+            image: "/images/tara-rafting-guide-djone.webp",
             desc: "Minister of safety on the rafting. Calm and composed, Nedeljko is your guardian on the river, ideal for a relaxed and safe family descent.",
             experience: "7 Years Experience",
             specialty: "Safety First"
@@ -741,7 +741,7 @@ const resources = {
                 price: "70€",
                 difficulty: "Medium",
                 description: "Ideal choice for those passing through! Experience the thrill of Tara and enjoy a traditional lunch. Fast, intense and unforgettable.",
-                image: "/images/raft-drina.webp",
+                image: "/images/scenic-drina-river-rafting.webp",
                 features: ["1x Meal (Lunch)", "No overnight stay", "All Equipment & Transport", "Insurance included"],
                 fullItinerary: [
                     "Group gathering at agreed time between participants and organizers.",
@@ -830,7 +830,7 @@ const resources = {
                 price: "210€",
                 difficulty: "Hard",
                 description: "Exclusive combination of Rafting and Hiking! Explore Perućica rainforest and Tara canyon. 5 meals and 2 nights for total hedonism.",
-                image: "/images/rafting-about-us.webp",
+                image: "/images/adventure-center-drina-team.webp",
                 features: ["5x Meals", "2x Nights", "Perućica Visit", "Rafting Adventure"],
                 fullItinerary: [
                     "DAY 1:",
@@ -857,7 +857,7 @@ const resources = {
               duration: "4h", 
               level: "Medium", 
               description: "Scenic hike along the edge of the 1000m deep canyon. Off-road vehicle departure.", 
-              image: "/images/hiking-kanjon-tare.webp", 
+              image: "/images/tara-river-canyon-hiking.webp", 
               details: ["Start: 08:00h via Off-road vehicle", "Hike duration: 4h", "View of Durmitor and Piva"],
               fullItinerary: [
                   "Departure at 08:00h by off-road vehicle from the camp.",
@@ -872,7 +872,7 @@ const resources = {
               duration: "4h", 
               level: "Medium", 
               description: "Hiking to the heart-shaped lake (Maglić/Volujak). Swimming possible.", 
-              image: "/images/trnovacko.webp", 
+              image: "/images/trnovacko-jezero-hiking-tara.webp", 
               details: ["Start: 08:00h to Prijevor (1668m)", "Hike duration: 4h", "Swimming in alpine lake"],
               fullItinerary: [
                   "Departure at 08:00h by off-road vehicle from the camp to Prijevor (1668m asl) at the foot of Maglić mountain.",
@@ -887,7 +887,7 @@ const resources = {
               duration: "6h", 
               level: "Hard", 
               description: "Conquer the highest peak of BiH (2386m) with panoramic views of NP Sutjeska.", 
-              image: "/images/maglic-mountain.webp", 
+              image: "/images/planinarenje-maglic-sutjeska.webp", 
               details: ["Start: 08:00h to Vučevo base", "Hike duration: 6h", "Highest peak of Bosnia & Herzegovina"],
               fullItinerary: [
                   "Departure at 08:00h from the camp to Lokva-Dernežište at the foot of Vučevo mountain.",
@@ -902,7 +902,7 @@ const resources = {
               duration: "4h", 
               level: "Easy/Medium", 
               description: "Walk through one of the last rainforests in Europe and view the 75m high Skakavac waterfall.", 
-              image: "/images/skakavac.webp",  
+              image: "/images/vodopad-skakavac-perucica.webp",  
               details: ["Start: 09:00h to Dragoš sedlo", "Hike duration: 4h", "Panoramic view of Skakavac waterfall"],
               fullItinerary: [
                   "Departure at 09:00h by off-road vehicle from the camp to Dragoš village.",
@@ -917,7 +917,7 @@ const resources = {
               duration: "3h+", 
               level: "Easy", 
               description: "Zelengora is famous for its 'mountain eyes' – crystal-clear glacial lakes.", 
-              image: "/images/donje-bare.webp", 
+              image: "/images/zelengora-planinska-jezera.webp", 
               details: ["Start: 09:00h towards Zelengora lakes", "Hike duration: 3h+", "This tour is fully customizable based on your wishes and fitness level."],
               fullItinerary: [
                   "Departure at 09:00h from the camp towards Zelengora.",
@@ -1086,7 +1086,7 @@ const resources = {
           },
           {
             id: 2,
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             title: "Prašuma Perućica",
             text: "Zakoračite u srce jedne od posljednjih očuvanih prašuma u Evropi, dom vodopada Skakavac."
           },
@@ -1316,7 +1316,7 @@ const resources = {
             "id": 1,
             "name": "Filip Vujičić",
             "role": "Menadžer i glavni vodič",
-            "image": "/images/fica-skiper.webp",
+            "image": "/images/tara-rafting-guide-fica.webp",
             "desc": "Filip je srce Auto Kampa Drina od svoje 12. godine, odrastajući uz ovaj voljeni porodični posao. Kao menadžer, on nadgleda svaki detalj iskustva gostiju, lično dočekujući posetioce kako bi osigurao srdačan i besprekoran boravak. Izvan granica kampa, Filip je profesionalni vodič za rafting i planinarenje, spajajući svoje duboko poznavanje lokalnog kraja sa strašću za avanturom. Bilo da upravlja logistikom ili vodi turu, Filip je uvek tu da pruži profesionalan i lični pečat vašem putovanju.",
             "experience": "10 godina iskustva",
             "specialty": "Divlje vode"
@@ -1325,7 +1325,7 @@ const resources = {
             "id": 2,
             "name": "Jovo",
             "role": "Glavni vodič za penjanje i planinarenje",
-            "image": "/images/jovo.webp",
+            "image": "/images/hiking-mountain-guide.webp",
             "desc": "Majstor visina i skrivenih planinskih staza. Jovo vas bezbedno vodi do najlepših vidikovaca Dinarskih Alpa. Njegova stručnost u penjanju i duboka strast prema divljini svaku šetnju pretvaraju u legendarnu priču.",
             "experience": "7 godina iskustva",
             "specialty": "Planinski vrhovi"
@@ -1334,7 +1334,7 @@ const resources = {
             "id": 3,
             "name": "David",
             "role": "Glavni skiper",
-            "image": "/images/baki-skiper.webp",
+            "image": "/images/tara-rafting-guide-baki.webp",
             "desc": "Naš glavni skiper i motor tima. On je zadužen za vrhunsku zabavu, a njegov avanturistički duh učiniće da svaki talas doživite na potpuno nov način.",
             "experience": "8 godina iskustva",
             "specialty": "Dobra energija"
@@ -1343,7 +1343,7 @@ const resources = {
             "id": 4,
             "name": "Nedeljko",
             "role": "Skiper",
-            "image": "/images/djone.webp",
+            "image": "/images/tara-rafting-guide-djone.webp",
             "desc": "Ministar bezbednosti na raftingu. Smiren i pribran, Nedeljko je vaš čuvar na reci, idealan za opušten i siguran porodični spust.",
             "experience": "7 godina iskustva",
             "specialty": "Bezbednost na prvom mestu"
@@ -1687,7 +1687,7 @@ const resources = {
                 price: "70€",
                 difficulty: "Srednje",
                 description: "Idealan izbor za one u prolazu! Doživite uzbuđenje Tare i uživajte u tradicionalnom ručku. Brzo, intenzivno i nezaboravno.",
-                image: "/images/raft-drina.webp",
+                image: "/images/scenic-drina-river-rafting.webp",
                 features: ["1x Obrok (Ručak)", "Bez noćenja", "Sva oprema & Prevoz", "Osiguranje uključeno"],
                 fullItinerary: [
                     "Okupljanje grupe u dogovoreno vrijeme između učesnika i organizatora.",
@@ -1778,7 +1778,7 @@ const resources = {
                 price: "210€",
                 difficulty: "Teško",
                 description: "Ekskluzivna kombinacija Raftinga i Hikinga! Istražite prašumu Perućicu i kanjon Tare. 5 obroka i 2 noćenja za totalni hedonizam.",
-                image: "/images/rafting-about-us.webp",
+                image: "/images/adventure-center-drina-team.webp",
                 features: ["5x Obroka", "2x Noćenja", "Posjeta prašumi Perućica", "Rafting avantura"],
                 fullItinerary: [
                     "DAN 1:",
@@ -1805,7 +1805,7 @@ const resources = {
               duration: "4h", 
               level: "Srednje", 
               description: "Scenic hike duž ivice 1000m dubokog kanjona. Polazak off-road vozilom.", 
-              image: "/images/hiking-kanjon-tare.webp", 
+              image: "/images/tara-river-canyon-hiking.webp", 
               details: ["Polazak: 08:00h Off-road vozilom", "Trajanje hikinga: 4h", "Pogled na Durmitor i Pivu"],
               fullItinerary: [
                   "Polazak u 08:00h terenskim vozilom iz kampa",
@@ -1820,7 +1820,7 @@ const resources = {
               duration: "4h", 
               level: "Srednje", 
               description: "Planinarenje do jezera u obliku srca (Maglić/Volujak). Moguće kupanje.", 
-              image: "/images/trnovacko.webp", 
+              image: "/images/trnovacko-jezero-hiking-tara.webp", 
               details: ["Polazak: 08:00h do Prijevora (1668m)", "Trajanje hikinga: 4h", "Plivanje u alpskom jezeru"],
               fullItinerary: [
                   "Polazak u 08:00h terenskim vozilom iz kampa do Prijevora (1668mnv) na podnožju planine Maglić",
@@ -1835,7 +1835,7 @@ const resources = {
               duration: "6h", 
               level: "Teško", 
               description: "Osvojite najviši vrh BiH (2386m) uz panoramske poglede na NP Sutjeska.", 
-              image: "/images/maglic-mountain.webp", 
+              image: "/images/planinarenje-maglic-sutjeska.webp", 
               details: ["Polazak: 08:00h do Vučevo baze", "Trajanje hikinga: 6h", "Najviši vrh Bosne i Hercegovine"],
               fullItinerary: [
                   "Polazak u 08:00h iz kampa do Lokva-Dernežište u podnožju planine Vučevo",
@@ -1850,7 +1850,7 @@ const resources = {
               duration: "4h", 
               level: "Lako/Srednje", 
               description: "Šetnja kroz jednu od posljednjih prašuma u Evropi i pogled na 75m visoki vodopad Skakavac.", 
-              image: "/images/skakavac.webp", 
+              image: "/images/vodopad-skakavac-perucica.webp", 
               details: ["Polazak: 09:00h do Dragoš sela", "Trajanje hikinga: 4h", "Panoramski pogled na vodopad Skakavac"],
               fullItinerary: [
                   "Polazak u 09:00h terenskim vozilom iz kampa u selo Dragoš",
@@ -1865,7 +1865,7 @@ const resources = {
               duration: "3h+", 
               level: "Lako", 
               description: "Zelengora je čuvena po svojim 'planinskim očima' – kristalnim glečerskim jezerima.", 
-              image: "/images/donje-bare.webp", 
+              image: "/images/zelengora-planinska-jezera.webp", 
               details: ["Polazak: 09:00h prema Zelengora jezerima", "Trajanje hikinga: 3h+", "Ova tura je potpuno prilagodljiva vašim željama i kondiciji."],
               fullItinerary: [
                   "Polazak u 09:00h iz kampa prema Zelengori",
@@ -2034,7 +2034,7 @@ const resources = {
           },
           {
             id: 2,
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             title: "Perućica-Urwald",
             text: "Treten Sie ein in das Herz eines der letzten erhaltenen Urwälder Europas, Heimat des Skakavac-Wasserfalls."
           },
@@ -2264,7 +2264,7 @@ const resources = {
             "id": 1,
             "name": "Filip Vujičić",
             "role": "Manager & Leitender Guide",
-            "image": "/images/fica-skiper.webp",
+            "image": "/images/tara-rafting-guide-fica.webp",
             "desc": "Filip ist seit seinem 12. Lebensjahr das Herz des Camps Drina iund wuchs in diesem geschätzten Familienunternehmen auf. Als Manager überwacht er jedes Detail des Gasterlebnisses und heißt Besucher persönlich willkommen, um einen herzlichen und reibungslosen Aufenthalt zu gewährleisten. Über das Camp-Gelände hinaus ist Filip ein professioneller Rafting- und Wanderguide, der sein tiefes lokales Wissen mit einer Leidenschaft für Abenteuer verbindet. Ob er die Logistik managt oder eine Tour leitet, Filip ist immer zur Stelle, um Ihrer Reise eine professionelle und persönliche Note zu verleihen.",
             "experience": "16 Jahre Erfahrung",
             "specialty": "Wildwasser"
@@ -2273,7 +2273,7 @@ const resources = {
             "id": 2,
             "name": "Jovo",
             "role": "Leitender Kletter- & Wanderführer",
-            "image": "/images/jovo.webp",
+            "image": "/images/hiking-mountain-guide.webp",
             "desc": "Der Meister der Höhen und versteckten Bergpfade. Jovo führt Sie sicher zu den atemberaubendsten Aussichtspunkten der Dinarischen Alpen. Seine Expertise im Klettern und seine tiefe Leidenschaft für die Wildnis machen jede Wanderung zu einer legendären Geschichte.",
             "experience": "7 Jahre Erfahrung",
             "specialty": "Berggipfel"
@@ -2282,7 +2282,7 @@ const resources = {
             "id": 3,
             "name": "David",
             "role": "Chef-Skipper",
-            "image": "/images/baki-skiper.webp",
+            "image": "/images/tara-rafting-guide-baki.webp",
             "desc": "Unser Chef-Skipper und der Motor des Teams. Er sorgt für erstklassigen Spaß, und sein Abenteuergeist lässt Sie jede Welle auf eine völlig neue Weise erleben.",
             "experience": "8 Jahre Erfahrung",
             "specialty": "Gute Stimmung"
@@ -2291,7 +2291,7 @@ const resources = {
             "id": 4,
             "name": "Nedeljko",
             "role": "Skiper",
-            "image": "/images/djone.webp",
+            "image": "/images/tara-rafting-guide-djone.webp",
             "desc": "Minister für Sicherheit beim Rafting. Ruhig und gefasst ist Nedeljko Ihr Beschützer auf dem Fluss – ideal für eine entspannte und sichere Familienabfahrt.",
             "experience": "7 Jahre Erfahrung",
             "specialty": "Sicherheit geht vor"
@@ -2628,7 +2628,7 @@ const resources = {
             price: "70€",
             difficulty: "Mittel",
             description: "Ideale Wahl für Durchreisende! Erleben Sie den Nervenkitzel der Tara und genießen Sie ein traditionelles Mittagessen. Schnell, intensiv und unvergesslich.",
-            image: "/images/raft-drina.webp",
+            image: "/images/scenic-drina-river-rafting.webp",
             features: ["1x Mahlzeit (Mittagessen)", "Keine Übernachtung", "Alle Ausrüstung & Transport", "Versicherung inklusive"],
             fullItinerary: [
               "Versammlung der Gruppe zur vereinbarten Zeit zwischen Teilnehmern und Organisatoren.",
@@ -2717,7 +2717,7 @@ const resources = {
             price: "210€",
             difficulty: "Schwer",
             description: "Exklusive Kombination aus Rafting und Wandern! Erkunden Sie den Perućica-Urwald und den Tara-Canyon. 5 Mahlzeiten und 2 Nächte für totalen Hedonismus.",
-            image: "/images/rafting-about-us.webp",
+            image: "/images/adventure-center-drina-team.webp",
             features: ["5x Mahlzeiten", "2x Nächte", "Perućica-Besuch", "Rafting-Abenteuer"],
             fullItinerary: [
               "TAG 1:",
@@ -2744,7 +2744,7 @@ const resources = {
             duration: "4 Std.",
             level: "Mittel",
             description: "Malerische Wanderung entlang des Randes der 1000m tiefen Schlucht. Abfahrt mit Geländewagen.",
-            image: "/images/hiking-kanjon-tare.webp",
+            image: "/images/tara-river-canyon-hiking.webp",
             details: ["Start: 08:00 Uhr via Geländewagen", "Wanderdauer: 4 Std.", "Blick auf Durmitor und Piva"],
             fullItinerary: [
               "Abfahrt um 08:00 Uhr mit dem Geländewagen vom Camp.",
@@ -2759,7 +2759,7 @@ const resources = {
             duration: "4 Std.",
             level: "Mittel",
             description: "Wanderung zum herzförmigen See (Maglić/Volujak). Schwimmen möglich.",
-            image: "/images/trnovacko.webp",
+            image: "/images/trnovacko-jezero-hiking-tara.webp",
             details: ["Start: 08:00 Uhr nach Prijevor (1668m)", "Wanderdauer: 4 Std.", "Schwimmen im Alpensee"],
             fullItinerary: [
               "Abfahrt um 08:00 Uhr mit dem Geländewagen vom Camp nach Prijevor (1668m ü.M.) am Fuße des Maglić-Gebirges.",
@@ -2774,7 +2774,7 @@ const resources = {
             duration: "6 Std.",
             level: "Schwer",
             description: "Bezwingen Sie den höchsten Gipfel von BuH (2386m) mit Panoramablick auf den NP Sutjeska.",
-            image: "/images/maglic-mountain.webp",
+            image: "/images/planinarenje-maglic-sutjeska.webp",
             details: ["Start: 08:00 Uhr zur Basis Vučevo", "Wanderdauer: 6 Std.", "Höchster Gipfel von Bosnien & Herzegowina"],
             fullItinerary: [
               "Abfahrt um 08:00 Uhr vom Camp nach Lokva-Dernežište am Fuße des Vučevo-Gebirges.",
@@ -2789,7 +2789,7 @@ const resources = {
             duration: "4 Std.",
             level: "Leicht/Mittel",
             description: "Spaziergang durch einen der letzten Urwälder Europas und Blick auf den 75m hohen Skakavac-Wasserfall.",
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             details: ["Start: 09:00 Uhr nach Dragoš sedlo", "Wanderdauer: 4 Std.", "Panoramablick auf den Skakavac-Wasserfall"],
             fullItinerary: [
               "Abfahrt um 09:00 Uhr mit dem Geländewagen vom Camp zum Dorf Dragoš.",
@@ -2804,7 +2804,7 @@ const resources = {
             duration: "3 Std.",
             level: "Leicht",
             description: "Zelengora ist berühmt für ihre „Bergaugen“ – kristallklare Gletscherseen.",
-            image: "/images/donje-bare.webp",
+            image: "/images/zelengora-planinska-jezera.webp",
             details: ["Abfahrt: 09:00 Uhr zu den Zelengora-Seen", "Wanderdauer: 3h+", "Diese Tour lässt sich voll und ganz an Ihre Wünsche und Kondition anpassen."],
             fullItinerary: [
               "Abfahrt um 09:00 Uhr vom Camp in Richtung Zelengora",

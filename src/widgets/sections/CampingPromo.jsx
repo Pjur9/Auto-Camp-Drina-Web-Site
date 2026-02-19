@@ -74,7 +74,7 @@ export const CampingPromo = ({ openBooking }) => {
 
           <div className="lg:w-1/2 relative h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl group animate-fade-in-up">
             <img 
-              src="/images/campers.webp" 
+              src="/images/rv-park-camper-van-spots-foca.webp" 
               alt="Camping Auto Camp Drina" 
               className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
               loading="lazy"

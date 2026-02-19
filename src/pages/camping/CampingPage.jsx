@@ -55,7 +55,7 @@ const CampingPage = ({ openBooking }) => {
           
           <div className="md:w-1/2 relative h-[400px] w-full rounded-2xl overflow-hidden shadow-xl group">
             <img 
-              src="/images/auto-camp-drina.webp" 
+              src="/images/about-auto-camp-drina-foca.webp" 
               alt="Camping Atmosphere" 
               className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" 
               loading="lazy"
@@ -82,7 +82,7 @@ const CampingPage = ({ openBooking }) => {
           <AccommodationCard 
             title={accommodation.bungalows.title}
             desc={accommodation.bungalows.desc}
-            image="/images/bungalov.webp"
+            image="/images/wooden-bungalow-accommodation-foca.webp"
             features={accommodation.bungalows.features}
             badge={accommodation.bungalows.badge}
             onBook={() => openBooking("Bungalov")}
@@ -91,7 +91,7 @@ const CampingPage = ({ openBooking }) => {
           <AccommodationCard 
             title={accommodation.campers.title} 
             desc={accommodation.campers.desc}
-            image="/images/campers.webp"
+            image="/images/rv-park-camper-van-spots-foca.webp"
             features={accommodation.campers.features}
             onBook={() => openBooking("Mjesto za Kamper")}
             bookBtnText={t('campingPage.accommodation.bookBtn')}
@@ -108,7 +108,7 @@ const CampingPage = ({ openBooking }) => {
 
         <div className="relative rounded-3xl p-10 md:p-16 mb-20 overflow-hidden shadow-2xl border border-primary/20">
           <img 
-            src="/images/gallery7.webp" 
+            src="/images/motorcycle-touring-balkans-stop.webp" 
             alt="Amenities Background" 
             className="absolute inset-0 w-full h-full object-cover z-0"
             loading="lazy"
