@@ -7,7 +7,7 @@ export const AboutHero = () => {
   return (
     <section 
       className="relative py-32 flex items-center bg-fixed bg-cover bg-center mb-8 md:mb-16 shadow-2xl" 
-      style={{ backgroundImage: 'url("/images/auto-camp-drina.webp")' }}
+      style={{ backgroundImage: 'url("/images/about-auto-camp-drina-foca.webp")' }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary-dark/90" />
       

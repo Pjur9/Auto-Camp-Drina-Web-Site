@@ -83,7 +83,7 @@ const AboutUsPage = ({ openBooking }) => {
           <div className="lg:w-1/2 relative">
             <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
               <img 
-                src="/images/campers.webp" 
+                src="/images/rv-park-camper-van-spots-foca.webp" 
                 alt="Family Tradition" 
                 className="w-full h-[500px] object-cover hover:scale-105 transition duration-700"
               />
@@ -176,7 +176,7 @@ const AboutUsPage = ({ openBooking }) => {
 
       <div className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/dinaric-alps.webp" alt="Hiking" className="w-full h-full object-cover" />
+          <img src="/images/dinaric-alps-mountain-range-bosnia.webp" alt="Hiking" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-primary-dark/50" /> 
         </div>
 

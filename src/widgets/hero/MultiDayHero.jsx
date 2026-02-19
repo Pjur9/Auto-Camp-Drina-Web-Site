@@ -8,7 +8,7 @@ export const MultiDayHero = () => {
     <section 
       className="relative py-32 flex items-center bg-fixed bg-cover bg-center mb-8 md:mb-16 shadow-2xl "  
       style={{
-        backgroundImage: 'url("/images/mda-hero.webp")',
+        backgroundImage: 'url("/images/multi-day-adventure-tara.webp")',
         backgroundPosition: 'bottom',
         backgroundSize: 'cover' }}
     >

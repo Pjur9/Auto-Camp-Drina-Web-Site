@@ -159,7 +159,7 @@ const resources = {
           },
           {
             id: 2,
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             title: "Perućica Rainforest and Waterfall Skakavac",
             text: "Step into the heart of one of the last preserved rainforests in Europe, home to the Skakavac waterfall."
           },
@@ -857,7 +857,7 @@ const resources = {
               duration: "4h", 
               level: "Medium", 
               description: "Scenic hike along the edge of the 1000m deep canyon. Off-road vehicle departure.", 
-              image: "/images/hiking-kanjon-tare.webp", 
+              image: "/images/tara-river-canyon-hiking.webp", 
               details: ["Start: 08:00h via Off-road vehicle", "Hike duration: 4h", "View of Durmitor and Piva"],
               fullItinerary: [
                   "Departure at 08:00h by off-road vehicle from the camp.",
@@ -872,7 +872,7 @@ const resources = {
               duration: "4h", 
               level: "Medium", 
               description: "Hiking to the heart-shaped lake (Maglić/Volujak). Swimming possible.", 
-              image: "/images/trnovacko.webp", 
+              image: "/images/trnovacko-jezero-hiking-tara.webp", 
               details: ["Start: 08:00h to Prijevor (1668m)", "Hike duration: 4h", "Swimming in alpine lake"],
               fullItinerary: [
                   "Departure at 08:00h by off-road vehicle from the camp to Prijevor (1668m asl) at the foot of Maglić mountain.",
@@ -887,7 +887,7 @@ const resources = {
               duration: "6h", 
               level: "Hard", 
               description: "Conquer the highest peak of BiH (2386m) with panoramic views of NP Sutjeska.", 
-              image: "/images/maglic-mountain.webp", 
+              image: "/images/planinarenje-maglic-sutjeska.webp", 
               details: ["Start: 08:00h to Vučevo base", "Hike duration: 6h", "Highest peak of Bosnia & Herzegovina"],
               fullItinerary: [
                   "Departure at 08:00h from the camp to Lokva-Dernežište at the foot of Vučevo mountain.",
@@ -902,7 +902,7 @@ const resources = {
               duration: "4h", 
               level: "Easy/Medium", 
               description: "Walk through one of the last rainforests in Europe and view the 75m high Skakavac waterfall.", 
-              image: "/images/skakavac.webp",  
+              image: "/images/vodopad-skakavac-perucica.webp",  
               details: ["Start: 09:00h to Dragoš sedlo", "Hike duration: 4h", "Panoramic view of Skakavac waterfall"],
               fullItinerary: [
                   "Departure at 09:00h by off-road vehicle from the camp to Dragoš village.",
@@ -917,7 +917,7 @@ const resources = {
               duration: "3h+", 
               level: "Easy", 
               description: "Zelengora is famous for its 'mountain eyes' – crystal-clear glacial lakes.", 
-              image: "/images/donje-bare.webp", 
+              image: "/images/zelengora-planinska-jezera.webp", 
               details: ["Start: 09:00h towards Zelengora lakes", "Hike duration: 3h+", "This tour is fully customizable based on your wishes and fitness level."],
               fullItinerary: [
                   "Departure at 09:00h from the camp towards Zelengora.",
@@ -1086,7 +1086,7 @@ const resources = {
           },
           {
             id: 2,
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             title: "Prašuma Perućica",
             text: "Zakoračite u srce jedne od posljednjih očuvanih prašuma u Evropi, dom vodopada Skakavac."
           },
@@ -1805,7 +1805,7 @@ const resources = {
               duration: "4h", 
               level: "Srednje", 
               description: "Scenic hike duž ivice 1000m dubokog kanjona. Polazak off-road vozilom.", 
-              image: "/images/hiking-kanjon-tare.webp", 
+              image: "/images/tara-river-canyon-hiking.webp", 
               details: ["Polazak: 08:00h Off-road vozilom", "Trajanje hikinga: 4h", "Pogled na Durmitor i Pivu"],
               fullItinerary: [
                   "Polazak u 08:00h terenskim vozilom iz kampa",
@@ -1820,7 +1820,7 @@ const resources = {
               duration: "4h", 
               level: "Srednje", 
               description: "Planinarenje do jezera u obliku srca (Maglić/Volujak). Moguće kupanje.", 
-              image: "/images/trnovacko.webp", 
+              image: "/images/trnovacko-jezero-hiking-tara.webp", 
               details: ["Polazak: 08:00h do Prijevora (1668m)", "Trajanje hikinga: 4h", "Plivanje u alpskom jezeru"],
               fullItinerary: [
                   "Polazak u 08:00h terenskim vozilom iz kampa do Prijevora (1668mnv) na podnožju planine Maglić",
@@ -1835,7 +1835,7 @@ const resources = {
               duration: "6h", 
               level: "Teško", 
               description: "Osvojite najviši vrh BiH (2386m) uz panoramske poglede na NP Sutjeska.", 
-              image: "/images/maglic-mountain.webp", 
+              image: "/images/planinarenje-maglic-sutjeska.webp", 
               details: ["Polazak: 08:00h do Vučevo baze", "Trajanje hikinga: 6h", "Najviši vrh Bosne i Hercegovine"],
               fullItinerary: [
                   "Polazak u 08:00h iz kampa do Lokva-Dernežište u podnožju planine Vučevo",
@@ -1850,7 +1850,7 @@ const resources = {
               duration: "4h", 
               level: "Lako/Srednje", 
               description: "Šetnja kroz jednu od posljednjih prašuma u Evropi i pogled na 75m visoki vodopad Skakavac.", 
-              image: "/images/skakavac.webp", 
+              image: "/images/vodopad-skakavac-perucica.webp", 
               details: ["Polazak: 09:00h do Dragoš sela", "Trajanje hikinga: 4h", "Panoramski pogled na vodopad Skakavac"],
               fullItinerary: [
                   "Polazak u 09:00h terenskim vozilom iz kampa u selo Dragoš",
@@ -1865,7 +1865,7 @@ const resources = {
               duration: "3h+", 
               level: "Lako", 
               description: "Zelengora je čuvena po svojim 'planinskim očima' – kristalnim glečerskim jezerima.", 
-              image: "/images/donje-bare.webp", 
+              image: "/images/zelengora-planinska-jezera.webp", 
               details: ["Polazak: 09:00h prema Zelengora jezerima", "Trajanje hikinga: 3h+", "Ova tura je potpuno prilagodljiva vašim željama i kondiciji."],
               fullItinerary: [
                   "Polazak u 09:00h iz kampa prema Zelengori",
@@ -2034,7 +2034,7 @@ const resources = {
           },
           {
             id: 2,
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             title: "Perućica-Urwald",
             text: "Treten Sie ein in das Herz eines der letzten erhaltenen Urwälder Europas, Heimat des Skakavac-Wasserfalls."
           },
@@ -2744,7 +2744,7 @@ const resources = {
             duration: "4 Std.",
             level: "Mittel",
             description: "Malerische Wanderung entlang des Randes der 1000m tiefen Schlucht. Abfahrt mit Geländewagen.",
-            image: "/images/hiking-kanjon-tare.webp",
+            image: "/images/tara-river-canyon-hiking.webp",
             details: ["Start: 08:00 Uhr via Geländewagen", "Wanderdauer: 4 Std.", "Blick auf Durmitor und Piva"],
             fullItinerary: [
               "Abfahrt um 08:00 Uhr mit dem Geländewagen vom Camp.",
@@ -2759,7 +2759,7 @@ const resources = {
             duration: "4 Std.",
             level: "Mittel",
             description: "Wanderung zum herzförmigen See (Maglić/Volujak). Schwimmen möglich.",
-            image: "/images/trnovacko.webp",
+            image: "/images/trnovacko-jezero-hiking-tara.webp",
             details: ["Start: 08:00 Uhr nach Prijevor (1668m)", "Wanderdauer: 4 Std.", "Schwimmen im Alpensee"],
             fullItinerary: [
               "Abfahrt um 08:00 Uhr mit dem Geländewagen vom Camp nach Prijevor (1668m ü.M.) am Fuße des Maglić-Gebirges.",
@@ -2774,7 +2774,7 @@ const resources = {
             duration: "6 Std.",
             level: "Schwer",
             description: "Bezwingen Sie den höchsten Gipfel von BuH (2386m) mit Panoramablick auf den NP Sutjeska.",
-            image: "/images/maglic-mountain.webp",
+            image: "/images/planinarenje-maglic-sutjeska.webp",
             details: ["Start: 08:00 Uhr zur Basis Vučevo", "Wanderdauer: 6 Std.", "Höchster Gipfel von Bosnien & Herzegowina"],
             fullItinerary: [
               "Abfahrt um 08:00 Uhr vom Camp nach Lokva-Dernežište am Fuße des Vučevo-Gebirges.",
@@ -2789,7 +2789,7 @@ const resources = {
             duration: "4 Std.",
             level: "Leicht/Mittel",
             description: "Spaziergang durch einen der letzten Urwälder Europas und Blick auf den 75m hohen Skakavac-Wasserfall.",
-            image: "/images/skakavac.webp",
+            image: "/images/vodopad-skakavac-perucica.webp",
             details: ["Start: 09:00 Uhr nach Dragoš sedlo", "Wanderdauer: 4 Std.", "Panoramablick auf den Skakavac-Wasserfall"],
             fullItinerary: [
               "Abfahrt um 09:00 Uhr mit dem Geländewagen vom Camp zum Dorf Dragoš.",
@@ -2804,7 +2804,7 @@ const resources = {
             duration: "3 Std.",
             level: "Leicht",
             description: "Zelengora ist berühmt für ihre „Bergaugen“ – kristallklare Gletscherseen.",
-            image: "/images/donje-bare.webp",
+            image: "/images/zelengora-planinska-jezera.webp",
             details: ["Abfahrt: 09:00 Uhr zu den Zelengora-Seen", "Wanderdauer: 3h+", "Diese Tour lässt sich voll und ganz an Ihre Wünsche und Kondition anpassen."],
             fullItinerary: [
               "Abfahrt um 09:00 Uhr vom Camp in Richtung Zelengora",

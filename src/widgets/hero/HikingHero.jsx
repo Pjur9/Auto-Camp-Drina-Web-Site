@@ -8,7 +8,7 @@ export const HikingHero = () => {
   return (
     <section 
       className="relative py-32 flex items-center bg-fixed bg-cover bg-center mb-8 md:mb-16 shadow-2xl" 
-      style={{ backgroundImage: 'url("/images/maglic-mountain.webp")' }}
+      style={{ backgroundImage: 'url("/images/planinarenje-maglic-sutjeska.webp")' }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary-light/60" />
       

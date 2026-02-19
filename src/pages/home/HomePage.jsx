@@ -98,7 +98,7 @@ const HomePage = ({ openBooking, openDetails }) => {
             <div className="hidden lg:block lg:w-1/2 relative">
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl group">
                 <img 
-                  src="/images/family.webp"
+                  src="/images/family-rafting-tara-safe-trip.webp"
                   alt="Camp Atmosphere" 
                   className="w-full h-[500px] object-cover hover:scale-105 transition duration-700"
                   loading="lazy"
@@ -137,7 +137,7 @@ const HomePage = ({ openBooking, openDetails }) => {
 
               <div className="block lg:hidden w-full h-[300px] mb-10 relative rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="/images/family.webp"
+                  src="/images/family-rafting-tara-safe-trip.webp"
                   alt="Camp Atmosphere" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -178,7 +178,7 @@ const HomePage = ({ openBooking, openDetails }) => {
 
       <section 
         className="relative py-24 bg-fixed bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: 'url("/images/hiking-background-home.webp")' }}
+        style={{ backgroundImage: 'url("/images/hero-hiking-sutjeska-national-park.webp")' }}
       >
         <div className="absolute inset-0 bg-primary/90 md:bg-primary/92"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
