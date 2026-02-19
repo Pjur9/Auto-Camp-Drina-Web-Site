@@ -25,13 +25,13 @@ export const RaftingHero = () => {
           {t('raftingHero.title')}
         </h1>
         
-        <p className="text-base md:text-xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto text-gray-200 italic">
+        <h2 className="text-base md:text-xl font-light opacity-90 leading-relaxed max-w-3xl mx-auto text-gray-200 italic">
           <Trans i18nKey="raftingHero.description">
             <span className="text-secondary font-semibold not-italic border-b-2 border-secondary/30">
               najdublji kanjon u Evropi
             </span>
           </Trans>
-        </p>
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 border-t border-white/10 pt-16 mt-8">
           <Feature 
