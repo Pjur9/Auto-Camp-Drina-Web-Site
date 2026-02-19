@@ -7,7 +7,7 @@ export const RAFTING_PACKAGES = [
         difficulty: "Srednje",
         description: "Idealan izbor za one u prolazu! Doživite uzbuđenje Tare i uživajte u tradicionalnom ručku. Brzo, intenzivno i nezaboravno.",
         features: ["1x Obrok (Ručak)", "Bez noćenja", "Sva oprema & Prevoz", "Osiguranje uključeno"],
-        image: "/images/raft-drina.webp",
+        image: "/images/scenic-drina-river-rafting.webp",
         fullItinerary: [
             "Okupljanje grupe u dogovoreno vrijeme između učesnika i organizatora.",
             "Zaduživanje opreme: Svaki učesnik dobija neoprensko odijelo, čizme i prsluk.",
@@ -98,7 +98,7 @@ export const RAFTING_PACKAGES = [
         difficulty: "Teško",
         description: "Ekskluzivna kombinacija Raftinga i Hikinga! Istražite prašumu Perućicu i kanjon Tare. 5 obroka i 2 noćenja za totalni hedonizam.",
         features: ["5x Obroka", "2x Noćenja", "Posjeta prašumi Perućica", "Rafting avantura"],
-        image: "/images/rafting-about-us.webp",
+        image: "/images/adventure-center-drina-team.webp",
         fullItinerary: [
             "DAN 1:",
             "Dolazak u kamp u popodnevnim satima i smještaj.",

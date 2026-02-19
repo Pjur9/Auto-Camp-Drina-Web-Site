@@ -105,7 +105,7 @@ const BikerHubPage = ({ openBooking }) => {
             <div 
                 className="fixed inset-0 z-0 pointer-events-none opacity-10 grayscale contrast-125"
                 style={{ 
-                    backgroundImage: 'url("/images/bike-background.webp")',
+                    backgroundImage: 'url("/images/biker-friendly-accommodation-bosnia.webpground.webp")',
                     backgroundPosition: 'right center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
@@ -263,11 +263,11 @@ const BikerHubPage = ({ openBooking }) => {
                         <div className="max-w-5xl mx-auto">
                             <BikerGallerySlider 
                                 images={[
-                                    '/images/gallery1.webp', '/images/gallery2.webp', '/images/gallery3.webp',
-                                    '/images/gallery4.webp', '/images/gallery5.webp', '/images/gallery6.webp',
-                                    '/images/gallery7.webp', '/images/gallery8.webp', '/images/gallery9.webp',
-                                    '/images/gallery10.webp', '/images/gallery11.webp', '/images/gallery12.webp',
-                                    '/images/gallery13.webp'
+                                    '/images/motorcycle-friendly-camp-drina-bosnia.webp', '/images/bikers-gathering-foca-auto-camp.webp', '/images/moto-adventure-rest-stop-drina.webp',
+                                    '/images/biker-community-fun-drina-river.webp', '/images/secure-motorcycle-parking-camp-bosnia.webp', '/images/bikers-breakfast-riverside-foca.webp',
+                                    '/images/motorcycle-touring-balkans-stop.webp', '/images/auto-camp-drina-biker-hub-gathering.webp', '/images/adventure-riders-camp-bosnia-nature.webp',
+                                    '/images/bikers-night-camp-fire-drina.webp', '/images/motorcycle-road-trip-bosnia-stay.webp', '/images/friendly-moto-camp-tara-river.webp',
+                                    '/images/bikers-hospitality-auto-camp-drina.webp'
                                 ]} 
                             />
                         </div>

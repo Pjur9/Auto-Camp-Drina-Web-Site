@@ -108,7 +108,7 @@ const CampingPage = ({ openBooking }) => {
 
         <div className="relative rounded-3xl p-10 md:p-16 mb-20 overflow-hidden shadow-2xl border border-primary/20">
           <img 
-            src="/images/gallery7.webp" 
+            src="/images/motorcycle-touring-balkans-stop.webp" 
             alt="Amenities Background" 
             className="absolute inset-0 w-full h-full object-cover z-0"
             loading="lazy"

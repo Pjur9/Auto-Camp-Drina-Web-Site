@@ -389,7 +389,7 @@ const resources = {
             id: 1,
             name: "Filip Vujičić",
             role: "Manager & Lead Guide",
-            image: "/images/fica-skiper.webp",
+            image: "/images/tara-rafting-guide-fica.webp",
             desc: "Filip has been the heart of Camp Drina since the age of 12, growing up within this cherished family business. As Manager, he oversees every detail of the guest experience, personally hosting visitors to ensure a warm, seamless stay. ​Beyond the campsite walls, Filip is a professional rafting and hiking guide, blending his deep local knowledge with a passion for adventure. Whether he’s managing logistics or leading a tour, Filip is always on hand to provide a professional, hands-on touch to your journey.",
             experience: "10 Years Experience",
             specialty: "Wild Waters"
@@ -398,7 +398,7 @@ const resources = {
             id: 2,
             name: "Jovo",
             role: "Lead Climbing & Hiking Guide",
-            image: "/images/jovo.webp",
+            image: "/images/hiking-mountain-guide.webp",
             desc: "The master of heights and hidden mountain trails. Jovo leads you safely to the most stunning viewpoints of the Dinaric Alps. His expertise in climbing and deep passion for the wilderness turn every hike into a legendary story.",
             experience: "7 Years Experience",
             specialty: "Mountain Peaks"
@@ -407,7 +407,7 @@ const resources = {
             id: 3,
             name: "David",
             role: "Head Skipper",
-            image: "/images/baki-skiper.webp",
+            image: "/images/tara-rafting-guide-baki.webp",
             desc: "Our head skipper and the engine of the team. He is in charge of top-tier fun, and his adventurous spirit will make you experience every wave in a completely new way.",
             experience: "8 Years Experience",
             specialty: "Good Vibes"
@@ -416,7 +416,7 @@ const resources = {
             id: 4,
             name: "Nedeljko",
             role: "Skipper",
-            image: "/images/djone.webp",
+            image: "/images/tara-rafting-guide-djone.webp",
             desc: "Minister of safety on the rafting. Calm and composed, Nedeljko is your guardian on the river, ideal for a relaxed and safe family descent.",
             experience: "7 Years Experience",
             specialty: "Safety First"
@@ -741,7 +741,7 @@ const resources = {
                 price: "70€",
                 difficulty: "Medium",
                 description: "Ideal choice for those passing through! Experience the thrill of Tara and enjoy a traditional lunch. Fast, intense and unforgettable.",
-                image: "/images/raft-drina.webp",
+                image: "/images/scenic-drina-river-rafting.webp",
                 features: ["1x Meal (Lunch)", "No overnight stay", "All Equipment & Transport", "Insurance included"],
                 fullItinerary: [
                     "Group gathering at agreed time between participants and organizers.",
@@ -830,7 +830,7 @@ const resources = {
                 price: "210€",
                 difficulty: "Hard",
                 description: "Exclusive combination of Rafting and Hiking! Explore Perućica rainforest and Tara canyon. 5 meals and 2 nights for total hedonism.",
-                image: "/images/rafting-about-us.webp",
+                image: "/images/adventure-center-drina-team.webp",
                 features: ["5x Meals", "2x Nights", "Perućica Visit", "Rafting Adventure"],
                 fullItinerary: [
                     "DAY 1:",
@@ -1316,7 +1316,7 @@ const resources = {
             "id": 1,
             "name": "Filip Vujičić",
             "role": "Menadžer i glavni vodič",
-            "image": "/images/fica-skiper.webp",
+            "image": "/images/tara-rafting-guide-fica.webp",
             "desc": "Filip je srce Auto Kampa Drina od svoje 12. godine, odrastajući uz ovaj voljeni porodični posao. Kao menadžer, on nadgleda svaki detalj iskustva gostiju, lično dočekujući posetioce kako bi osigurao srdačan i besprekoran boravak. Izvan granica kampa, Filip je profesionalni vodič za rafting i planinarenje, spajajući svoje duboko poznavanje lokalnog kraja sa strašću za avanturom. Bilo da upravlja logistikom ili vodi turu, Filip je uvek tu da pruži profesionalan i lični pečat vašem putovanju.",
             "experience": "10 godina iskustva",
             "specialty": "Divlje vode"
@@ -1325,7 +1325,7 @@ const resources = {
             "id": 2,
             "name": "Jovo",
             "role": "Glavni vodič za penjanje i planinarenje",
-            "image": "/images/jovo.webp",
+            "image": "/images/hiking-mountain-guide.webp",
             "desc": "Majstor visina i skrivenih planinskih staza. Jovo vas bezbedno vodi do najlepših vidikovaca Dinarskih Alpa. Njegova stručnost u penjanju i duboka strast prema divljini svaku šetnju pretvaraju u legendarnu priču.",
             "experience": "7 godina iskustva",
             "specialty": "Planinski vrhovi"
@@ -1334,7 +1334,7 @@ const resources = {
             "id": 3,
             "name": "David",
             "role": "Glavni skiper",
-            "image": "/images/baki-skiper.webp",
+            "image": "/images/tara-rafting-guide-baki.webp",
             "desc": "Naš glavni skiper i motor tima. On je zadužen za vrhunsku zabavu, a njegov avanturistički duh učiniće da svaki talas doživite na potpuno nov način.",
             "experience": "8 godina iskustva",
             "specialty": "Dobra energija"
@@ -1343,7 +1343,7 @@ const resources = {
             "id": 4,
             "name": "Nedeljko",
             "role": "Skiper",
-            "image": "/images/djone.webp",
+            "image": "/images/tara-rafting-guide-djone.webp",
             "desc": "Ministar bezbednosti na raftingu. Smiren i pribran, Nedeljko je vaš čuvar na reci, idealan za opušten i siguran porodični spust.",
             "experience": "7 godina iskustva",
             "specialty": "Bezbednost na prvom mestu"
@@ -1687,7 +1687,7 @@ const resources = {
                 price: "70€",
                 difficulty: "Srednje",
                 description: "Idealan izbor za one u prolazu! Doživite uzbuđenje Tare i uživajte u tradicionalnom ručku. Brzo, intenzivno i nezaboravno.",
-                image: "/images/raft-drina.webp",
+                image: "/images/scenic-drina-river-rafting.webp",
                 features: ["1x Obrok (Ručak)", "Bez noćenja", "Sva oprema & Prevoz", "Osiguranje uključeno"],
                 fullItinerary: [
                     "Okupljanje grupe u dogovoreno vrijeme između učesnika i organizatora.",
@@ -1778,7 +1778,7 @@ const resources = {
                 price: "210€",
                 difficulty: "Teško",
                 description: "Ekskluzivna kombinacija Raftinga i Hikinga! Istražite prašumu Perućicu i kanjon Tare. 5 obroka i 2 noćenja za totalni hedonizam.",
-                image: "/images/rafting-about-us.webp",
+                image: "/images/adventure-center-drina-team.webp",
                 features: ["5x Obroka", "2x Noćenja", "Posjeta prašumi Perućica", "Rafting avantura"],
                 fullItinerary: [
                     "DAN 1:",
@@ -2264,7 +2264,7 @@ const resources = {
             "id": 1,
             "name": "Filip Vujičić",
             "role": "Manager & Leitender Guide",
-            "image": "/images/fica-skiper.webp",
+            "image": "/images/tara-rafting-guide-fica.webp",
             "desc": "Filip ist seit seinem 12. Lebensjahr das Herz des Camps Drina iund wuchs in diesem geschätzten Familienunternehmen auf. Als Manager überwacht er jedes Detail des Gasterlebnisses und heißt Besucher persönlich willkommen, um einen herzlichen und reibungslosen Aufenthalt zu gewährleisten. Über das Camp-Gelände hinaus ist Filip ein professioneller Rafting- und Wanderguide, der sein tiefes lokales Wissen mit einer Leidenschaft für Abenteuer verbindet. Ob er die Logistik managt oder eine Tour leitet, Filip ist immer zur Stelle, um Ihrer Reise eine professionelle und persönliche Note zu verleihen.",
             "experience": "16 Jahre Erfahrung",
             "specialty": "Wildwasser"
@@ -2273,7 +2273,7 @@ const resources = {
             "id": 2,
             "name": "Jovo",
             "role": "Leitender Kletter- & Wanderführer",
-            "image": "/images/jovo.webp",
+            "image": "/images/hiking-mountain-guide.webp",
             "desc": "Der Meister der Höhen und versteckten Bergpfade. Jovo führt Sie sicher zu den atemberaubendsten Aussichtspunkten der Dinarischen Alpen. Seine Expertise im Klettern und seine tiefe Leidenschaft für die Wildnis machen jede Wanderung zu einer legendären Geschichte.",
             "experience": "7 Jahre Erfahrung",
             "specialty": "Berggipfel"
@@ -2282,7 +2282,7 @@ const resources = {
             "id": 3,
             "name": "David",
             "role": "Chef-Skipper",
-            "image": "/images/baki-skiper.webp",
+            "image": "/images/tara-rafting-guide-baki.webp",
             "desc": "Unser Chef-Skipper und der Motor des Teams. Er sorgt für erstklassigen Spaß, und sein Abenteuergeist lässt Sie jede Welle auf eine völlig neue Weise erleben.",
             "experience": "8 Jahre Erfahrung",
             "specialty": "Gute Stimmung"
@@ -2291,7 +2291,7 @@ const resources = {
             "id": 4,
             "name": "Nedeljko",
             "role": "Skiper",
-            "image": "/images/djone.webp",
+            "image": "/images/tara-rafting-guide-djone.webp",
             "desc": "Minister für Sicherheit beim Rafting. Ruhig und gefasst ist Nedeljko Ihr Beschützer auf dem Fluss – ideal für eine entspannte und sichere Familienabfahrt.",
             "experience": "7 Jahre Erfahrung",
             "specialty": "Sicherheit geht vor"
@@ -2628,7 +2628,7 @@ const resources = {
             price: "70€",
             difficulty: "Mittel",
             description: "Ideale Wahl für Durchreisende! Erleben Sie den Nervenkitzel der Tara und genießen Sie ein traditionelles Mittagessen. Schnell, intensiv und unvergesslich.",
-            image: "/images/raft-drina.webp",
+            image: "/images/scenic-drina-river-rafting.webp",
             features: ["1x Mahlzeit (Mittagessen)", "Keine Übernachtung", "Alle Ausrüstung & Transport", "Versicherung inklusive"],
             fullItinerary: [
               "Versammlung der Gruppe zur vereinbarten Zeit zwischen Teilnehmern und Organisatoren.",
@@ -2717,7 +2717,7 @@ const resources = {
             price: "210€",
             difficulty: "Schwer",
             description: "Exklusive Kombination aus Rafting und Wandern! Erkunden Sie den Perućica-Urwald und den Tara-Canyon. 5 Mahlzeiten und 2 Nächte für totalen Hedonismus.",
-            image: "/images/rafting-about-us.webp",
+            image: "/images/adventure-center-drina-team.webp",
             features: ["5x Mahlzeiten", "2x Nächte", "Perućica-Besuch", "Rafting-Abenteuer"],
             fullItinerary: [
               "TAG 1:",
