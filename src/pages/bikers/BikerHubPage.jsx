@@ -105,7 +105,7 @@ const BikerHubPage = ({ openBooking }) => {
             <div 
                 className="fixed inset-0 z-0 pointer-events-none opacity-10 grayscale contrast-125"
                 style={{ 
-                    backgroundImage: 'url("/images/bikers-bosnia-auto-camp-drina.webp")',
+                    backgroundImage: 'url("/images/biker-friendly-accommodation-bosnia.webp")',
                     backgroundPosition: 'right center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
@@ -179,7 +179,7 @@ const BikerHubPage = ({ openBooking }) => {
                             </div>
 
                             <div className="lg:col-span-5 order-3 lg:order-4 relative min-h-[300px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white group">
-                                <img src="/images/biker-riverside-camping-drina-bosnia.webp" alt="Trail" className="absolute inset-0 w-full h-full object-cover object-bottom grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
+                                <img src="/images/bikers-hospitality-auto-camp-drina.webp" alt="Trail" className="absolute inset-0 w-full h-full object-cover object-bottom grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
                                 <div className="absolute inset-0 bg-[#2dd4bf]/10 mix-blend-multiply"></div>
                                 <div className="absolute bottom-6 right-6 bg-white shadow-lg px-4 py-2 rounded-full text-[#1c1917] text-[10px] font-bold uppercase tracking-widest">
                                     {t('bikerHub.features.campView')}

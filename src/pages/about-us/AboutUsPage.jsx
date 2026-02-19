@@ -162,7 +162,7 @@ const AboutUsPage = ({ openBooking }) => {
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-[2rem] overflow-hidden shadow-xl border border-secondary/10">
                 <img 
-                  src="/images/safety.webp" 
+                  src="/images/rafting-tara-boat-safety.webp" 
                   alt="Safety Equipment" 
                   className="w-full h-[450px] object-cover hover:scale-105 transition duration-700"
                 />
@@ -274,7 +274,7 @@ const AboutUsPage = ({ openBooking }) => {
           <div className="max-w-6xl mx-auto">
             <StandardSlider 
               items={displaySkippers}
-              autoplayDelay={5000}
+              autoplayDelay={15000}
               itemsPerView={{ mobile: 1, tablet: 2, desktop: 3 }}
               renderItem={(skipper) => (
                 <SkipperCard skipper={skipper} />
