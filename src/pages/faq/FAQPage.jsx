@@ -129,7 +129,7 @@ const FAQPage = ({ openBooking, openQuestion }) => {
         </div>
 
         <div className="mt-20 md:mt-32 bg-primary-dark rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden shadow-2xl mx-4">
-          <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/5 to-transparent opacity-50" />
             <div className="relative z-10">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-accent/20 rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-6 md:mb-8 rotate-3">
                 <MessageCircle size={32} className="text-accent" />
