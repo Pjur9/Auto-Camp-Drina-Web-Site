@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useParams, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { SITE_DATA } from '../entities/general/model/site-data';
@@ -19,6 +19,7 @@ const AboutUsPage = lazy(() => import('../pages/about-us/AboutUsPage'));
 const BikerHubPage = lazy(() => import('../pages/bikers/BikerHubPage'));
 const FAQPage = lazy(() => import('../pages/faq/FAQPage'));
 
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -26,7 +27,6 @@ const ScrollToTop = () => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -40,20 +40,28 @@ const LoadingSpinner = () => (
 );
 
 // --- SEO Handler ---
-const SEOHandler = () => {
-  const { lang } = useParams();
+// Sada prima lang i pageKey eksplicitno, kako bi tačno znao šta da izvuče iz i18n JSON-a
+const SEOHandler = ({ lang, pageKey }) => {
   const { pathname } = useLocation();
-  const { i18n: i18nInstance } = useTranslation();
+  // Koristimo t direktno iz hook-a umjesto getFixedT za bolju reaktivnost
+  const { t, i18n } = useTranslation();
   
-  const pathSegments = pathname.split('/').filter(Boolean);
-  const activePage = pathSegments[1] || 'home'; 
+  const currentLang = lang || i18n.language || 'en';
   
-  const currentLang = lang || i18nInstance.language || 'en';
+  // Izvlačimo prevod direktno naglašavajući jezik
+  const title = t(`seo.${pageKey}.title`, { lng: currentLang });
+  const description = t(`seo.${pageKey}.description`, { lng: currentLang });
   
-  const fixedT = i18nInstance.getFixedT(currentLang);
-  const title = fixedT(`seo.${activePage}.title`);
-  const description = fixedT(`seo.${activePage}.description`);
-  const canonicalUrl = `https://autocampdrina.com/${currentLang}/${activePage === 'home' ? '' : activePage}`;
+  // Canonical URL tačno mapira na trenutni path
+  const canonicalUrl = `https://autocampdrina.com${pathname === '/' ? `/${currentLang}` : pathname}`;
+
+  // OVO JE TRIK: Brutalno tjeramo browser da promijeni naslov 
+  // čim se promijeni 'title' varijabla (rješava lokalni bug)
+  useEffect(() => {
+    if (title) {
+      document.title = title;
+    }
+  }, [title]);
 
   return (
     <Helmet>
@@ -79,12 +87,13 @@ const SEOHandler = () => {
   );
 };
 
-const PageLayout = ({ children, openBooking }) => {
-  const { lang } = useParams();
+// --- Page Layout ---
+const PageLayout = ({ children, openBooking, lang, pageKey }) => {
   const { i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    // Sinkronizacija i18next jezika sa onim što je u URL-u
     if (lang && i18n.language !== lang) {
       i18n.changeLanguage(lang);
     }
@@ -98,7 +107,7 @@ const PageLayout = ({ children, openBooking }) => {
 
   return (
     <div className="font-sans text-gray-800 antialiased selection:bg-secondary selection:text-white relative bg-[#f9fafb]">
-      <SEOHandler />
+      <SEOHandler lang={lang} pageKey={pageKey} />
       <Navbar isScrolled={isScrolled} openBooking={openBooking} />
       <main className="min-h-screen">
         <Suspense fallback={<LoadingSpinner />}>
@@ -134,56 +143,52 @@ function App() {
       <Router>
         <ScrollToTop />
         <Routes>
+          {/* Default redirekcija sa root domena na engleski jezik */}
           <Route path="/" element={<Navigate to="/en" replace />} />
 
-          <Route path="/:lang" element={
-            <PageLayout openBooking={openBooking}>
-              <HomePage openBooking={openBooking} openDetails={openDetails} />
-            </PageLayout>
-          } />
+          {/* ======================= */}
+          {/* --- ENGLESKI JEZIK  --- */}
+          {/* ======================= */}
+          <Route path="/en">
+            <Route index element={<PageLayout lang="en" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="rafting" element={<PageLayout lang="en" pageKey="rafting" openBooking={openBooking}><RaftingPage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="hiking" element={<PageLayout lang="en" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="camping" element={<PageLayout lang="en" pageKey="camping" openBooking={openBooking}><CampingPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="multiday" element={<PageLayout lang="en" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="aboutus" element={<PageLayout lang="en" pageKey="aboutus" openBooking={openBooking}><AboutUsPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="bikerhub" element={<PageLayout lang="en" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="faq" element={<PageLayout lang="en" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+          </Route>
 
-          <Route path="/:lang/rafting" element={
-            <PageLayout openBooking={openBooking}>
-              <RaftingPage openBooking={openBooking} openDetails={openDetails} />
-            </PageLayout>
-          } />
+          {/* ======================= */}
+          {/* --- SRPSKI JEZIK    --- */}
+          {/* ======================= */}
+          <Route path="/sr">
+            <Route index element={<PageLayout lang="sr" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="rafting" element={<PageLayout lang="sr" pageKey="rafting" openBooking={openBooking}><RaftingPage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="planinarenje" element={<PageLayout lang="sr" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="kampovanje" element={<PageLayout lang="sr" pageKey="camping" openBooking={openBooking}><CampingPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="visednevni" element={<PageLayout lang="sr" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="o-nama" element={<PageLayout lang="sr" pageKey="aboutus" openBooking={openBooking}><AboutUsPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="motociklisti" element={<PageLayout lang="sr" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="faq" element={<PageLayout lang="sr" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+          </Route>
 
-          <Route path="/:lang/hiking" element={
-            <PageLayout openBooking={openBooking}>
-              <HikingPage openBooking={openBooking} openQuestion={openQuestion} />
-            </PageLayout>
-          } />
+          {/* ======================= */}
+          {/* --- NJEMAČKI JEZIK  --- */}
+          {/* ======================= */}
+          <Route path="/de">
+            <Route index element={<PageLayout lang="de" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="rafting" element={<PageLayout lang="de" pageKey="rafting" openBooking={openBooking}><RaftingPage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="wandern" element={<PageLayout lang="de" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="camping" element={<PageLayout lang="de" pageKey="camping" openBooking={openBooking}><CampingPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="mehrtagestouren" element={<PageLayout lang="de" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="ueber-uns" element={<PageLayout lang="de" pageKey="aboutus" openBooking={openBooking}><AboutUsPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="motorrad" element={<PageLayout lang="de" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="faq" element={<PageLayout lang="de" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+          </Route>
 
-          <Route path="/:lang/camping" element={
-            <PageLayout openBooking={openBooking}>
-              <CampingPage openBooking={openBooking} />
-            </PageLayout>
-          } />
-
-          <Route path="/:lang/multiday" element={
-            <PageLayout openBooking={openBooking}>
-              <MultiDayPage openBooking={openBooking} openQuestion={openQuestion} />
-            </PageLayout>
-          } />
-
-          <Route path="/:lang/aboutus" element={
-            <PageLayout openBooking={openBooking}>
-              <AboutUsPage openBooking={openBooking} />
-            </PageLayout>
-          } />
-
-          <Route path="/:lang/bikerhub" element={
-            <PageLayout openBooking={openBooking}>
-              <BikerHubPage openBooking={openBooking} />
-            </PageLayout>
-          } />
-
-          <Route path="/:lang/faq" element={
-            <PageLayout openBooking={openBooking}>
-              <FAQPage openBooking={openBooking} openQuestion={() => setQuestionModalOpen(true)} />
-            </PageLayout>
-          } />
-
+          {/* Fallback ako se ukuca nepostojeća ruta */}
           <Route path="*" element={<Navigate to="/en" replace />} />
         </Routes>
 

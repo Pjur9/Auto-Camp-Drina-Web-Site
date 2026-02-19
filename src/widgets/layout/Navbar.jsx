@@ -8,6 +8,27 @@ import { FaGoogle, FaTripadvisor } from "react-icons/fa";
 import { TbBrandBooking } from "react-icons/tb";
 import { SITE_DATA } from '../../entities/general/model/site-data';
 
+// Mapa svih naših lokalizovanih URL-ova
+const ROUTE_MAP = {
+  home:     { en: '/en', sr: '/sr', de: '/de' },
+  rafting:  { en: '/en/rafting', sr: '/sr/rafting', de: '/de/rafting' },
+  hiking:   { en: '/en/hiking', sr: '/sr/planinarenje', de: '/de/wandern' },
+  camping:  { en: '/en/camping', sr: '/sr/kampovanje', de: '/de/camping' },
+  multiday: { en: '/en/multiday', sr: '/sr/visednevni', de: '/de/mehrtagestouren' },
+  aboutus:  { en: '/en/aboutus', sr: '/sr/o-nama', de: '/de/ueber-uns' },
+  bikerhub: { en: '/en/bikerhub', sr: '/sr/motociklisti', de: '/de/motorrad' },
+  faq:      { en: '/en/faq', sr: '/sr/faq', de: '/de/faq' }
+};
+
+// Pomoćna funkcija koja prepoznaje "ključ" stranice na osnovu URL-a
+const getCurrentPageKey = (pathname) => {
+  if (pathname === '/en' || pathname === '/sr' || pathname === '/de' || pathname === '/') return 'home';
+  for (const [key, paths] of Object.entries(ROUTE_MAP)) {
+    if (Object.values(paths).includes(pathname)) return key;
+  }
+  return 'home';
+};
+
 const EXTERNAL_LINKS = {
   tripAdvisor: "https://www.tripadvisor.com/Hotel_Review-g1900043-d3382359-Reviews-Auto_Camp_Drina-Foca_Republika_Srpska.html",
   booking: "https://www.booking.com/hotel/ba/camping-drina.sr.html#tab-main",
@@ -21,23 +42,23 @@ const LANGUAGES = [
 ];
 
 const DESKTOP_LINKS = [
-  { id: 'home', type: 'link', path: '' },
+  { id: 'home', type: 'link' },
   { id: 'activities', type: 'dropdown', subLinks: ['rafting', 'hiking', 'multiday'] },
-  { id: 'camping', type: 'link', path: 'camping' },
-  { id: 'aboutus', type: 'link', path: 'aboutus' },
-  { id: 'bikerhub', type: 'link', path: 'bikerhub' },
-  { id: 'faq', type: 'link', path: 'faq' }
+  { id: 'camping', type: 'link' },
+  { id: 'aboutus', type: 'link' },
+  { id: 'bikerhub', type: 'link' },
+  { id: 'faq', type: 'link' }
 ];
 
 const MOBILE_LINKS = [
-  { id: 'home', path: '' },
-  { id: 'rafting', path: 'rafting' },
-  { id: 'hiking', path: 'hiking' },
-  { id: 'camping', path: 'camping' },
-  { id: 'multiday', path: 'multiday' },
-  { id: 'aboutus', path: 'aboutus' },
-  { id: 'bikerhub', path: 'bikerhub' },
-  { id: 'faq', path: 'faq' }
+  { id: 'home' },
+  { id: 'rafting' },
+  { id: 'hiking' },
+  { id: 'camping' },
+  { id: 'multiday' },
+  { id: 'aboutus' },
+  { id: 'bikerhub' },
+  { id: 'faq' }
 ];
 
 const BookingIcon = ({ className }) => <TbBrandBooking className={className} />;
@@ -56,16 +77,16 @@ export const Navbar = ({ openBooking, isScrolled }) => {
   const [emailCopied, setEmailCopied] = useState(false);
   const activitiesRef = useRef(null);
 
-  const pathSegments = pathname.split('/').filter(Boolean);
-  const activePage = pathSegments[1] || 'home';
+  // Određujemo na kojoj smo trenutno stranici i jeziku
+  const currentPageKey = getCurrentPageKey(pathname);
+  const currentLangObj = LANGUAGES.find(l => l.code === (lang || i18n.language)) || LANGUAGES[0];
+  const currentLang = currentLangObj.code;
 
-  const getPath = (pagePath) => pagePath === '' ? `/${lang}` : `/${lang}/${pagePath}`;
-
+  // Nova, pametna funkcija za promjenu jezika
   const changeLanguage = (newLangCode) => {
     i18n.changeLanguage(newLangCode);
-    const segments = pathname.split('/').filter(Boolean);
-    segments[0] = newLangCode;
-    navigate(`/${segments.join('/')}`);
+    const newUrl = ROUTE_MAP[currentPageKey][newLangCode];
+    navigate(newUrl);
     setIsLangMenuOpen(false);
   };
 
@@ -94,16 +115,15 @@ export const Navbar = ({ openBooking, isScrolled }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const currentLang = LANGUAGES.find(l => l.code === (lang || i18n.language)) || LANGUAGES[0];
   const getFlagUrl = (code) => `https://flagcdn.com/w40/${code}.png`;
 
-  const isBikerPage = activePage === 'bikerhub';
+  const isBikerPage = currentPageKey === 'bikerhub';
   const themeBg = isBikerPage ? 'bg-[#1c1917]' : 'bg-primary';
   const themeAccentText = isBikerPage ? 'text-accent' : 'text-secondary';
   const themeHoverText = isBikerPage ? 'hover:text-accent' : 'hover:text-secondary';
   const themeIndicator = isBikerPage ? 'bg-accent shadow-[0_0_8px_#ea580c]' : 'bg-secondary shadow-[0_0_8px_#2dd4bf]';
 
-  const navThemeClass = isScrolled || activePage !== 'home' || isMobileMenuOpen 
+  const navThemeClass = isScrolled || currentPageKey !== 'home' || isMobileMenuOpen 
     ? `${themeBg} shadow-lg` 
     : 'bg-transparent';
 
@@ -114,13 +134,13 @@ export const Navbar = ({ openBooking, isScrolled }) => {
         <div className="max-w-7xl mx-auto px-8 flex justify-end items-center gap-6 text-white text-xs font-medium">
           <div className="relative">
             <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className={`flex items-center gap-2 transition focus:outline-none ${themeHoverText}`}>
-              <img src={getFlagUrl(currentLang.country_code)} alt={currentLang.label} className="w-5 h-auto rounded-sm" />
+              <img src={getFlagUrl(currentLangObj.country_code)} alt={currentLangObj.label} className="w-5 h-auto rounded-sm" />
               <ChevronDown size={14} />
             </button>
             {isLangMenuOpen && (
               <div className={`absolute top-full right-0 mt-2 ${isBikerPage ? 'bg-[#1c1917]' : 'bg-primary-dark'} border border-white/10 rounded-lg shadow-xl py-1 w-32 z-50`}>
                 {LANGUAGES.map((l) => (
-                  <button key={l.code} onClick={() => changeLanguage(l.code)} className={`flex items-center gap-3 w-full px-4 py-2 text-sm hover:bg-white/10 transition ${lang === l.code ? themeAccentText : 'text-white'}`}>
+                  <button key={l.code} onClick={() => changeLanguage(l.code)} className={`flex items-center gap-3 w-full px-4 py-2 text-sm hover:bg-white/10 transition ${currentLang === l.code ? themeAccentText : 'text-white'}`}>
                     <img src={getFlagUrl(l.country_code)} alt={l.label} className="w-5 h-auto rounded-sm" />
                     <span>{l.label}</span>
                   </button>
@@ -148,8 +168,8 @@ export const Navbar = ({ openBooking, isScrolled }) => {
       <div className={`transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
           <Link 
-            to={getPath('')} 
-            onClick={() => { if (pathname === getPath('')) window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            to={ROUTE_MAP['home'][currentLang]} 
+            onClick={() => { if (currentPageKey === 'home') window.scrollTo({ top: 0, behavior: 'smooth' }); }}
             className="text-white font-bold text-xl md:text-2xl tracking-tighter cursor-pointer flex items-center gap-3 font-['Montserrat'] shrink-0"
           >
             <img src="/images/android-chrome-192x192.png" alt="Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 p-0.5" />
@@ -159,7 +179,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
           <div className="hidden lg:flex items-center gap-8 text-white text-sm font-bold tracking-widest">
             {DESKTOP_LINKS.map((link) => {
               if (link.type === 'dropdown') {
-                const isAnySubActive = link.subLinks.includes(activePage);
+                const isAnySubActive = link.subLinks.includes(currentPageKey);
                 return (
                   <div key={link.id} className="relative group" ref={activitiesRef}>
                     <button 
@@ -176,12 +196,12 @@ export const Navbar = ({ openBooking, isScrolled }) => {
                         {link.subLinks.map(subId => (
                           <Link 
                             key={subId} 
-                            to={getPath(subId)}
+                            to={ROUTE_MAP[subId][currentLang]}
                             onClick={() => {
                               setIsActivitiesOpen(false);
-                              if (pathname === getPath(subId)) window.scrollTo({ top: 0, behavior: 'smooth' });
+                              if (currentPageKey === subId) window.scrollTo({ top: 0, behavior: 'smooth' });
                             }}
-                            className={`flex items-center gap-3 w-full px-6 py-4 text-[11px] hover:bg-white/10 transition border-b border-white/5 last:border-none ${activePage === subId ? themeAccentText : 'text-white'}`}
+                            className={`flex items-center gap-3 w-full px-6 py-4 text-[11px] hover:bg-white/10 transition border-b border-white/5 last:border-none ${currentPageKey === subId ? themeAccentText : 'text-white'}`}
                           >
                             {t(`navbar.${subId}`)}
                           </Link>
@@ -194,12 +214,12 @@ export const Navbar = ({ openBooking, isScrolled }) => {
               return (
                 <Link 
                   key={link.id} 
-                  to={getPath(link.path)}
-                  onClick={() => { if (pathname === getPath(link.path)) window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className={`transition relative group py-2 ${themeHoverText} ${activePage === link.id ? themeAccentText : ''}`}
+                  to={ROUTE_MAP[link.id][currentLang]}
+                  onClick={() => { if (currentPageKey === link.id) window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className={`transition relative group py-2 ${themeHoverText} ${currentPageKey === link.id ? themeAccentText : ''}`}
                 >
                   {t(`navbar.${link.id}`)}
-                  <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${themeIndicator} ${activePage === link.id ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                  <span className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${themeIndicator} ${currentPageKey === link.id ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </Link>
               );
             })}
@@ -222,12 +242,12 @@ export const Navbar = ({ openBooking, isScrolled }) => {
             {MOBILE_LINKS.map((link) => (
               <Link 
                 key={link.id} 
-                to={getPath(link.path)}
+                to={ROUTE_MAP[link.id][currentLang]}
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  if (pathname === getPath(link.path)) window.scrollTo({ top: 0, behavior: 'smooth' });
+                  if (currentPageKey === link.id) window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className={`block w-full text-left text-lg py-5 px-6 rounded-2xl font-bold transition-all ${activePage === link.id ? (isBikerPage ? 'bg-accent text-white' : 'bg-secondary text-white') : 'text-gray-200 hover:bg-white/5'}`}
+                className={`block w-full text-left text-lg py-5 px-6 rounded-2xl font-bold transition-all ${currentPageKey === link.id ? (isBikerPage ? 'bg-accent text-white' : 'bg-secondary text-white') : 'text-gray-200 hover:bg-white/5'}`}
               >
                 {t(`navbar.${link.id}`)}
               </Link>
@@ -237,7 +257,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-col gap-10">
             <div className="flex justify-center gap-6">
               {LANGUAGES.map((l) => (
-                <button key={l.code} onClick={() => changeLanguage(l.code)} className={`p-4 rounded-2xl transition-all ${lang === l.code ? 'bg-white/20 scale-110 shadow-lg' : 'bg-white/5 opacity-60'}`}>
+                <button key={l.code} onClick={() => changeLanguage(l.code)} className={`p-4 rounded-2xl transition-all ${currentLang === l.code ? 'bg-white/20 scale-110 shadow-lg' : 'bg-white/5 opacity-60'}`}>
                   <img src={getFlagUrl(l.country_code)} alt={l.label} className="w-8 h-auto rounded-sm" />
                 </button>
               ))}
