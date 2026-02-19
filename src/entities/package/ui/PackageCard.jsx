@@ -30,7 +30,7 @@ export const PackageCard = memo(({
           </div>
           <img 
             src={item.image} 
-            alt={item.title} 
+            alt={`${item.title} - Auto Camp Drina`} 
             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
             loading="lazy"
           />
@@ -153,7 +153,7 @@ export const PackageCard = memo(({
       <div className="md:w-2/5 relative h-64 md:h-auto overflow-hidden group">
         <img 
           src={item.image} 
-          alt={item.title} 
+          alt={`${item.title} - Auto Camp Drina`} 
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
           loading="lazy"
         />

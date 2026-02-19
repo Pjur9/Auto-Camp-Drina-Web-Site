@@ -1,68 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://autocampdrina.com/en/</loc>
+    <loc>https://autocampdrina.com/sr/</loc>
     <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/" />
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/rafting</loc>
+    <loc>https://autocampdrina.com/sr/rafting</loc>
     <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/rafting" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/rafting" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/rafting" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/rafting" />
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/hiking</loc>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/hiking" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/hiking" />
+    <loc>https://autocampdrina.com/sr/planinarenje</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/planinarenje" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/hiking" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/wandern" />
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/multiday</loc>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/multiday" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/multiday" />
+    <loc>https://autocampdrina.com/sr/visednevni</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/visednevni" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/multiday" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/mehrtagestouren" />
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/camping</loc>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/camping" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/camping" />
+    <loc>https://autocampdrina.com/sr/kampovanje</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/kampovanje" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/camping" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/camping" />
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/bikerhub</loc>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/bikerhub" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/bikerhub" />
+    <loc>https://autocampdrina.com/sr/motociklisti</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/motociklisti" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/bikerhub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/motorrad" />
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/aboutus</loc>
-    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/aboutus" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/aboutus" />
+    <loc>https://autocampdrina.com/sr/o-nama</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/o-nama" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/aboutus" />
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/ueber-uns" />
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://autocampdrina.com/en/faq</loc>
+    <loc>https://autocampdrina.com/sr/faq</loc>
     <xhtml:link rel="alternate" hreflang="sr" href="https://autocampdrina.com/sr/faq" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/faq" />
     <xhtml:link rel="alternate" hreflang="en" href="https://autocampdrina.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://autocampdrina.com/de/faq" />
     <priority>0.5</priority>
   </url>
 
