@@ -43,16 +43,25 @@ const LoadingSpinner = () => (
 // Sada prima lang i pageKey eksplicitno, kako bi tačno znao šta da izvuče iz i18n JSON-a
 const SEOHandler = ({ lang, pageKey }) => {
   const { pathname } = useLocation();
-  const { i18n: i18nInstance } = useTranslation();
+  // Koristimo t direktno iz hook-a umjesto getFixedT za bolju reaktivnost
+  const { t, i18n } = useTranslation();
   
-  const currentLang = lang || i18nInstance.language || 'en';
-  const fixedT = i18nInstance.getFixedT(currentLang);
+  const currentLang = lang || i18n.language || 'en';
   
-  const title = fixedT(`seo.${pageKey}.title`);
-  const description = fixedT(`seo.${pageKey}.description`);
+  // Izvlačimo prevod direktno naglašavajući jezik
+  const title = t(`seo.${pageKey}.title`, { lng: currentLang });
+  const description = t(`seo.${pageKey}.description`, { lng: currentLang });
   
   // Canonical URL tačno mapira na trenutni path
   const canonicalUrl = `https://autocampdrina.com${pathname === '/' ? `/${currentLang}` : pathname}`;
+
+  // OVO JE TRIK: Brutalno tjeramo browser da promijeni naslov 
+  // čim se promijeni 'title' varijabla (rješava lokalni bug)
+  useEffect(() => {
+    if (title) {
+      document.title = title;
+    }
+  }, [title]);
 
   return (
     <Helmet>
