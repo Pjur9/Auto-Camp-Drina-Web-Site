@@ -17,7 +17,9 @@ const HikingPage = ({ openBooking, openQuestion, lang }) => {
   const [openCardId, setOpenCardId] = useState(null);
   const { i18n } = useTranslation();
   const currentLang = lang || i18n.language || 'en';
+  
   const handleCardToggle = (id) => {
+    console.log("👉 handleCardToggle pozvan za ID:", id); // Ostavi ovo privremeno da pratiš u konzoli
     setOpenCardId(prevId => prevId === id ? null : id);
   };
 
@@ -33,26 +35,31 @@ const HikingPage = ({ openBooking, openQuestion, lang }) => {
         />
 
         <div className="flex flex-wrap justify-center gap-8 mb-24">
-          {hikingTours.map((tour, index) => (
-            <div 
-              key={tour.id} 
-              className="animate-fade-in-up w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[440px]" 
-              style={{ 
-                animationDelay: `${index * 0.1}s`,
-                fillMode: 'both'
-              }}
-            >
-              <PackageCard 
-                item={{ ...tour, price: tour.price || t('common.onRequest') }} 
-                type="hiking" 
-                onBook={openBooking} 
-                layout="vertical"
-                isItineraryOpen={openCardId === tour.id}
-                onToggle={() => handleCardToggle(tour.id)} 
-                onShowDetails={() => {}} 
-              />
-            </div>
-          ))}
+          {hikingTours.map((tour, index) => {
+            // Kreiramo siguran ID - ako tour.id ne postoji, koristimo index (npr. 'tour-0', 'tour-1')
+            const safeId = tour.id || `tour-${index}`;
+
+            return (
+              <div 
+                key={safeId} 
+                className="animate-fade-in-up w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] max-w-[440px]" 
+                style={{ 
+                  animationDelay: `${index * 0.1}s`,
+                  fillMode: 'both'
+                }}
+              >
+                <PackageCard 
+                  item={{ ...tour, price: tour.price || t('common.onRequest') }} 
+                  type="hiking" 
+                  onBook={openBooking} 
+                  layout="vertical"
+                  isItineraryOpen={openCardId === safeId} // Koristimo safeId
+                  onToggle={() => handleCardToggle(safeId)} // Koristimo safeId
+                  onShowDetails={() => {}} 
+                />
+              </div>
+            );
+          })}
         </div>
 
         <HikingEquipment openBooking={openBooking} openQuestion={openQuestion} />

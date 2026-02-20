@@ -64,7 +64,8 @@ export const PackageCard = memo(({
           
           <div className="mt-auto pt-4 border-t border-gray-50 flex flex-col gap-2">
             {type === 'hiking' ? (
-              <Button 
+               !isItineraryOpen && (
+                <Button 
                 variant="outline" 
                 className="w-full !text-secondary !border-secondary hover:!bg-primary hover:!text-white flex justify-center items-center gap-2" 
                 onClick={(e) => {
@@ -76,6 +77,7 @@ export const PackageCard = memo(({
                 <BookOpen size={16} aria-hidden="true" /> {isItineraryOpen ? t('common.closePlan') : t('common.planTour')}
                 {isItineraryOpen ? <ChevronUp size={16} aria-hidden="true" /> : <ChevronDown size={16} aria-hidden="true" />}
               </Button>
+               )
             ) : (
               <Button 
                 variant="outline" 
