@@ -82,11 +82,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
 
           <div className="text-center mt-12">
             <Link to={`/${currentLang}/rafting`}>
-<<<<<<< feature/aria-label
               <Button aria-label={t('home.viewAllOffers', 'View all offers')} variant="primary">
-=======
-              <Button variant="primary">
->>>>>>> main
                 {t('home.viewAllOffers')}
               </Button>
             </Link>
@@ -205,11 +201,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
               </div>
 
               <Link to={`/${currentLang}/hiking`}>
-<<<<<<< feature/aria-label
                 <Button aria-label={t('home.allTours', 'See all tours')} variant="ghost" className="px-6 text-secondary hover:text-white hover:bg-white/10">
-=======
-                <Button variant="ghost" className="px-6 text-secondary hover:text-white hover:bg-white/10">
->>>>>>> main
                   {t('home.allTours')}
                 </Button>
               </Link>
