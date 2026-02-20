@@ -9,10 +9,11 @@ import { SectionTitle } from '../../shared/ui/SectionTitle';
 import { MeshBackground } from '../../shared/ui/MeshBackground';
 import { Container } from '../../shared/ui/Container';
 
-const RaftingPage = ({ openBooking, openDetails }) => {
+const RaftingPage = ({ openBooking, openDetails, lang }) => {
   const { t } = useTranslation();
   const raftingPackages = t('packages.rafting', { returnObjects: true });
-
+  const { i18n } = useTranslation();
+  const currentLang = lang || i18n.language || 'en';
   return (
     <div className="relative min-h-screen w-full bg-surface overflow-x-hidden">
       
@@ -52,7 +53,7 @@ const RaftingPage = ({ openBooking, openDetails }) => {
           </div>
 
           <div className="mt-24">
-            <FAQTeaser category="rafting" />
+            <FAQTeaser category="rafting" lang = {currentLang} />
           </div>
           
         </Container>

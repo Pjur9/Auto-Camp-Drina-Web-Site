@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { faqItems } from '../../entities/faq/faqData';
 
-export const FAQTeaser = ({ category = 'all' }) => {
+export const FAQTeaser = ({ category = 'all', lang }) => {
   const { t } = useTranslation();
-  const { lang } = useParams();
   const [openItem, setOpenItem] = useState(null);
+  const currentLang = lang
 
   const displayItems = useMemo(() => {
     const mapFaqContent = (item) => ({
@@ -91,7 +91,7 @@ export const FAQTeaser = ({ category = 'all' }) => {
 
         <div className="text-center">
           <Link 
-            to={`/${lang}/faq`}
+            to={`/${currentLang}/faq`}
             onClick={() => window.scrollTo(0, 0)}
             className="text-primary font-bold hover:text-accent transition inline-flex items-center justify-center gap-2 mx-auto group border-b-2 border-transparent hover:border-accent pb-1"
           >

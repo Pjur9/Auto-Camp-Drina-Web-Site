@@ -19,13 +19,14 @@ const EXTERNAL_LINKS = [
     { name: "TripAdvisor", url: "https://www.tripadvisor.com/Hotel_Review-g1900043-d3382359-Reviews-Auto_Camp_Drina-Foca_Republika_Srpska.html"},
 ];
 
-const AboutUsPage = ({ openBooking }) => {
+const AboutUsPage = ({ openBooking, lang }) => {
   const { t } = useTranslation();
-  const { lang } = useParams(); 
   
   const stats = t('hero.stats', { returnObjects: true });
   const skippers = t('aboutUsPage.skippers', { returnObjects: true });
-  const displaySkippers = Array.isArray(skippers) ? skippers : []; 
+  const displaySkippers = Array.isArray(skippers) ? skippers : [];
+  const { i18n } = useTranslation(); 
+  const currentLang = lang || i18n.language || 'en'; 
 
   return (
     <div className="pt-2 md:pt-16 bg-surface min-h-screen relative overflow-x-hidden w-full"> 
@@ -118,7 +119,7 @@ const AboutUsPage = ({ openBooking }) => {
                 <strong className="text-primary" />
               </Trans>
             </p>
-            <Link to={`/${lang}/rafting`}>
+            <Link to={`/${currentLang}/rafting`}>
               <Button>
                 {t('aboutUsPage.story2.button')} <ArrowRight size={20} className="ml-2" />
               </Button>
@@ -207,7 +208,7 @@ const AboutUsPage = ({ openBooking }) => {
             </ul>
 
             <Link 
-              to={`/${lang}/hiking`}
+              to={`/${currentLang}/hiking`}
               className="text-accent font-bold text-lg hover:text-orange-700 transition inline-flex items-center gap-2 group border-b-2 border-accent pb-1"
             >
               {t('aboutUsPage.story3.button')} 

@@ -51,9 +51,18 @@ const SEOHandler = ({ lang, pageKey }) => {
   // Izvlačimo prevod direktno naglašavajući jezik
   const title = t(`seo.${pageKey}.title`, { lng: currentLang });
   const description = t(`seo.${pageKey}.description`, { lng: currentLang });
+
+  const baseUrl = 'https://autocampdrina.com';
+  const purePath = pathname.replace(/^\/(en|de|sr)/, '') || '';
   
   // Canonical URL tačno mapira na trenutni path
   const canonicalUrl = `https://autocampdrina.com${pathname === '/' ? `/${currentLang}` : pathname}`;
+
+  useEffect(() => {
+    if (currentLang) {
+      document.documentElement.setAttribute('lang', currentLang);
+    }
+  }, [currentLang]);
 
   // OVO JE TRIK: Brutalno tjeramo browser da promijeni naslov 
   // čim se promijeni 'title' varijabla (rješava lokalni bug)
@@ -69,6 +78,10 @@ const SEOHandler = ({ lang, pageKey }) => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hreflang="sr" href={`${baseUrl}/sr${purePath}`} />
+      <link rel="alternate" hreflang="en" href={`${baseUrl}/en${purePath}`} />
+      <link rel="alternate" hreflang="de" href={`${baseUrl}/de${purePath}`} />
+      <link rel="alternate" hreflang="x-default" href={`${baseUrl}/en${purePath}`} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
@@ -151,11 +164,11 @@ function App() {
           {/* ======================= */}
           <Route path="/en">
             <Route index element={<PageLayout lang="en" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
-            <Route path="rafting" element={<PageLayout lang="en" pageKey="rafting" openBooking={openBooking}><RaftingPage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="rafting" element={<PageLayout lang="en" pageKey="rafting" openBooking={openBooking}><RaftingPage lang="en" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
             <Route path="hiking" element={<PageLayout lang="en" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
-            <Route path="camping" element={<PageLayout lang="en" pageKey="camping" openBooking={openBooking}><CampingPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="camping" element={<PageLayout lang="en" pageKey="camping" openBooking={openBooking}><CampingPage  openBooking={openBooking} /></PageLayout>} />
             <Route path="multiday" element={<PageLayout lang="en" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
-            <Route path="aboutus" element={<PageLayout lang="en" pageKey="aboutus" openBooking={openBooking}><AboutUsPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="aboutus" element={<PageLayout lang="en" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="en" openBooking={openBooking} /></PageLayout>} />
             <Route path="bikerhub" element={<PageLayout lang="en" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
             <Route path="faq" element={<PageLayout lang="en" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
           </Route>
@@ -165,11 +178,11 @@ function App() {
           {/* ======================= */}
           <Route path="/sr">
             <Route index element={<PageLayout lang="sr" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
-            <Route path="rafting" element={<PageLayout lang="sr" pageKey="rafting" openBooking={openBooking}><RaftingPage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="rafting" element={<PageLayout lang="sr" pageKey="rafting" openBooking={openBooking}><RaftingPage lang="sr" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
             <Route path="planinarenje" element={<PageLayout lang="sr" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
-            <Route path="kampovanje" element={<PageLayout lang="sr" pageKey="camping" openBooking={openBooking}><CampingPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="kampovanje" element={<PageLayout lang="sr" pageKey="camping" openBooking={openBooking}><CampingPage  openBooking={openBooking} /></PageLayout>} />
             <Route path="visednevni" element={<PageLayout lang="sr" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
-            <Route path="o-nama" element={<PageLayout lang="sr" pageKey="aboutus" openBooking={openBooking}><AboutUsPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="o-nama" element={<PageLayout lang="sr" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="sr" openBooking={openBooking} /></PageLayout>} />
             <Route path="motociklisti" element={<PageLayout lang="sr" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
             <Route path="faq" element={<PageLayout lang="sr" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
           </Route>
@@ -179,11 +192,11 @@ function App() {
           {/* ======================= */}
           <Route path="/de">
             <Route index element={<PageLayout lang="de" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
-            <Route path="rafting" element={<PageLayout lang="de" pageKey="rafting" openBooking={openBooking}><RaftingPage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route path="rafting" element={<PageLayout lang="de" pageKey="rafting" openBooking={openBooking}><RaftingPage lang="de" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
             <Route path="wandern" element={<PageLayout lang="de" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
-            <Route path="camping" element={<PageLayout lang="de" pageKey="camping" openBooking={openBooking}><CampingPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="camping" element={<PageLayout lang="de" pageKey="camping" openBooking={openBooking}><CampingPage  openBooking={openBooking} /></PageLayout>} />
             <Route path="mehrtagestouren" element={<PageLayout lang="de" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
-            <Route path="ueber-uns" element={<PageLayout lang="de" pageKey="aboutus" openBooking={openBooking}><AboutUsPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="ueber-uns" element={<PageLayout lang="de" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="de" openBooking={openBooking} /></PageLayout>} />
             <Route path="motorrad" element={<PageLayout lang="de" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
             <Route path="faq" element={<PageLayout lang="de" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
           </Route>

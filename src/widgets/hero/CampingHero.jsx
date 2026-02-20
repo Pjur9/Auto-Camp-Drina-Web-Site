@@ -7,7 +7,7 @@ export const CampingHero = () => {
   return (
     <section 
       className="relative py-32 flex items-center bg-fixed bg-cover bg-bottom mb-8 md:mb-16 shadow-2xl" 
-      style={{ backgroundImage: 'url("/images/kamp-drina-smjestaj-foca.webp")' }}
+      style={{ backgroundImage: "url('/images/kamp-drina-smjestaj-foca.webp')" }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary-dark/60 to-primary/90" />
       
