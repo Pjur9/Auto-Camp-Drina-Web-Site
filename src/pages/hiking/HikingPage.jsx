@@ -10,12 +10,13 @@ import { PackageCard } from '../../entities/package/ui/PackageCard';
 import { SectionTitle } from '../../shared/ui/SectionTitle';
 import { Container } from '../../shared/ui/Container';
 
-const HikingPage = ({ openBooking, openQuestion }) => {
+const HikingPage = ({ openBooking, openQuestion, lang }) => {
   const { t } = useTranslation();
   const hikingTours = t('packages.hiking', { returnObjects: true }); 
   
   const [openCardId, setOpenCardId] = useState(null);
-
+  const { i18n } = useTranslation();
+  const currentLang = lang || i18n.language || 'en';
   const handleCardToggle = (id) => {
     setOpenCardId(prevId => prevId === id ? null : id);
   };
@@ -55,7 +56,7 @@ const HikingPage = ({ openBooking, openQuestion }) => {
         </div>
 
         <HikingEquipment openBooking={openBooking} openQuestion={openQuestion} />
-        <FAQTeaser category="hiking" />
+        <FAQTeaser category="hiking" lang={currentLang} />
         
       </Container>
     </div>

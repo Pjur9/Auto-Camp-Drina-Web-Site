@@ -32,7 +32,7 @@ export default defineConfig({
         ],
         renderer: new PuppeteerRenderer({
           // Dajemo Reactu 1.5 sekundu vremena da povuče jezik i naslove prije slikanja
-          renderAfterTime: 1500,
+          renderAfterTime: 3000,
         })
       }),
       apply: 'build' // Radi samo kada pokrenemo npm run build

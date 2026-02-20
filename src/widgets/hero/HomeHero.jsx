@@ -4,9 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../shared/ui/Button';
 
-export const HomeHero = ({ openBooking }) => {
+export const HomeHero = ({ openBooking, lang }) => {
   const { t } = useTranslation();
-  const { lang } = useParams();
   const slides = t('hero.slides', { returnObjects: true });
   
   const [currentSlide, setCurrentSlide] = useState(0);

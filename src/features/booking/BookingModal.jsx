@@ -177,6 +177,7 @@ export const BookingModal = ({ isOpen, onClose, preselectedPackage }) => {
               </div>
 
               <button 
+                aria-label={t('booking.labels.send')}
                 type="submit" 
                 disabled={isSending}
                 className={`w-full text-white font-bold py-4 rounded-lg transition shadow-lg mt-4 flex items-center justify-center gap-2 uppercase tracking-widest text-sm
@@ -201,7 +202,8 @@ export const BookingModal = ({ isOpen, onClose, preselectedPackage }) => {
                 {t('multiDay.modal.successText')}
             </p>
 
-            <Button 
+            <Button
+                aria-label={t('common.close')}
                 onClick={handleClose} 
                 className="w-full bg-dark text-white hover:bg-primary py-4 rounded-2xl font-black shadow-lg transition-all uppercase tracking-widest"
             >

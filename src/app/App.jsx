@@ -163,9 +163,9 @@ function App() {
           {/* --- ENGLESKI JEZIK  --- */}
           {/* ======================= */}
           <Route path="/en">
-            <Route index element={<PageLayout lang="en" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route index element={<PageLayout lang="en" pageKey="home" openBooking={openBooking}><HomePage lang="en" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
             <Route path="rafting" element={<PageLayout lang="en" pageKey="rafting" openBooking={openBooking}><RaftingPage lang="en" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
-            <Route path="hiking" element={<PageLayout lang="en" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="hiking" element={<PageLayout lang="en" pageKey="hiking" openBooking={openBooking}><HikingPage  lang="en" openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="camping" element={<PageLayout lang="en" pageKey="camping" openBooking={openBooking}><CampingPage  openBooking={openBooking} /></PageLayout>} />
             <Route path="multiday" element={<PageLayout lang="en" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="aboutus" element={<PageLayout lang="en" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="en" openBooking={openBooking} /></PageLayout>} />
@@ -177,9 +177,9 @@ function App() {
           {/* --- SRPSKI JEZIK    --- */}
           {/* ======================= */}
           <Route path="/sr">
-            <Route index element={<PageLayout lang="sr" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route index element={<PageLayout lang="sr" pageKey="home" openBooking={openBooking}><HomePage lang="sr" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
             <Route path="rafting" element={<PageLayout lang="sr" pageKey="rafting" openBooking={openBooking}><RaftingPage lang="sr" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
-            <Route path="planinarenje" element={<PageLayout lang="sr" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="planinarenje" element={<PageLayout lang="sr" pageKey="hiking" openBooking={openBooking}><HikingPage lang="sr" openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="kampovanje" element={<PageLayout lang="sr" pageKey="camping" openBooking={openBooking}><CampingPage  openBooking={openBooking} /></PageLayout>} />
             <Route path="visednevni" element={<PageLayout lang="sr" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="o-nama" element={<PageLayout lang="sr" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="sr" openBooking={openBooking} /></PageLayout>} />
@@ -191,9 +191,9 @@ function App() {
           {/* --- NJEMAČKI JEZIK  --- */}
           {/* ======================= */}
           <Route path="/de">
-            <Route index element={<PageLayout lang="de" pageKey="home" openBooking={openBooking}><HomePage openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
+            <Route index element={<PageLayout lang="de" pageKey="home" openBooking={openBooking}><HomePage lang="de" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
             <Route path="rafting" element={<PageLayout lang="de" pageKey="rafting" openBooking={openBooking}><RaftingPage lang="de" openBooking={openBooking} openDetails={openDetails} /></PageLayout>} />
-            <Route path="wandern" element={<PageLayout lang="de" pageKey="hiking" openBooking={openBooking}><HikingPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
+            <Route path="wandern" element={<PageLayout lang="de" pageKey="hiking" openBooking={openBooking}><HikingPage lang="de" openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="camping" element={<PageLayout lang="de" pageKey="camping" openBooking={openBooking}><CampingPage  openBooking={openBooking} /></PageLayout>} />
             <Route path="mehrtagestouren" element={<PageLayout lang="de" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="ueber-uns" element={<PageLayout lang="de" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="de" openBooking={openBooking} /></PageLayout>} />

@@ -79,6 +79,7 @@ export const PackageCard = memo(({
             ) : (
               <Button 
                 variant="outline" 
+                aria-label={t('common.planTour')}
                 className="w-full !text-secondary !border-secondary hover:!bg-gray-50 hover:!text-primary" 
                 onClick={() => onShowDetails(item)}
               >
@@ -86,7 +87,8 @@ export const PackageCard = memo(({
               </Button>
             )}
 
-            <Button 
+            <Button
+              aria-label={t('common.bookAdventure')} 
               variant="primary" 
               className="w-full justify-center bg-accent hover:bg-accent-hover text-white border-none shadow-md active:scale-95 transition-transform" 
               onClick={() => onBook(item.title)}
@@ -108,6 +110,7 @@ export const PackageCard = memo(({
             </div>
             
             <button 
+              aria-label={t('common.closePlan')}
               onClick={(e) => { e.stopPropagation(); onToggle(); }} 
               className="p-2 bg-accent hover:bg-accent-hover rounded-full transition-colors text-white"
             >
@@ -186,14 +189,16 @@ export const PackageCard = memo(({
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100 mt-auto">
-          <button 
+          <button
+            aria-label={t('common.planTour')}
             onClick={() => onShowDetails(item)} 
             className="px-6 py-3 rounded-md font-semibold border-2 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
           >
             <BookOpen size={18} aria-hidden="true" /> {t('common.planTour')}
           </button>
           
-          <Button 
+          <Button
+            aria-label={t('common.bookAdventure')}
             className="flex-1 justify-center text-center bg-accent hover:bg-accent-hover text-white border-none shadow-md active:scale-95 transition-transform" 
             onClick={() => onBook(item.title)} 
             icon={ChevronRight}
