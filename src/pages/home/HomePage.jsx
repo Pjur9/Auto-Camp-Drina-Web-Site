@@ -16,19 +16,18 @@ import { PackageCard } from '../../entities/package/ui/PackageCard';
 import { Button } from '../../shared/ui/Button';
 import { CountUp } from '../../shared/ui/CountUp'; 
 
-const HomePage = ({ openBooking, openDetails }) => {
+const HomePage = ({ openBooking, openDetails, lang }) => {
   const { t } = useTranslation(); 
-  const { lang } = useParams();
-
   const raftingPackages = t('packages.rafting', { returnObjects: true });
   const hikingTours = t('packages.hiking', { returnObjects: true });
   const stats = t('hero.stats', { returnObjects: true });
-  
+  const { i18n } = useTranslation();
+  const currentLang = lang || i18n.language || 'en';
   const topOffers = raftingPackages.filter(pkg => [1, 3, 4].includes(pkg.id));
 
   return (
     <>
-      <HomeHero openBooking={openBooking} />
+      <HomeHero openBooking={openBooking} lang = {currentLang} />
 
       <section className="bg-primary py-16 border-b border-white/10 relative z-20">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
@@ -82,7 +81,7 @@ const HomePage = ({ openBooking, openDetails }) => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to={`/${lang}/rafting`}>
+            <Link to={`/${currentLang}/rafting`}>
               <Button variant="primary">
                 {t('home.viewAllOffers')}
               </Button>
@@ -164,7 +163,7 @@ const HomePage = ({ openBooking, openDetails }) => {
               </div>
 
               <Link 
-                to={`/${lang}/aboutus`}
+                to={`/${currentLang}/aboutus`}
                 aria-label={t('aboutUs.ariaLabel', 'Read more about Auto Camp Drina tradition and host family')}
               >
                 <Button className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-xl flex items-center gap-2 transition-all w-full md:w-auto justify-center">
@@ -201,7 +200,7 @@ const HomePage = ({ openBooking, openDetails }) => {
                 <FeatureRow icon={Car} title={t('home.offRoadTransport')} subtitle={t('home.offRoadTransportDesc')} />
               </div>
 
-              <Link to={`/${lang}/hiking`}>
+              <Link to={`/${currentLang}/hiking`}>
                 <Button variant="ghost" className="px-6 text-secondary hover:text-white hover:bg-white/10">
                   {t('home.allTours')}
                 </Button>
@@ -209,15 +208,15 @@ const HomePage = ({ openBooking, openDetails }) => {
             </div>
 
             <div className="lg:w-2/3 w-full h-[450px]">
-              <HikingSlider slides={hikingTours} />
+              <HikingSlider slides={hikingTours} lang={currentLang}/>
             </div>
           </div>
         </div>
       </section>
 
-      <CampingPromo openBooking={openBooking} />
+      <CampingPromo openBooking={openBooking} lang={currentLang}/>
       <ReviewsSection />
-      <FAQTeaser category="all" />
+      <FAQTeaser category="all" lang={currentLang} />
     </>
   );
 };

@@ -6,10 +6,9 @@ import { Link, useParams } from 'react-router-dom';
 import { SectionTitle } from '../../shared/ui/SectionTitle';
 import { Button } from '../../shared/ui/Button';
 
-export const CampingPromo = ({ openBooking }) => {
+export const CampingPromo = ({ openBooking, lang }) => {
   const { t } = useTranslation();
-  const { lang } = useParams();
-
+  
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden w-full">
       <div className="max-w-7xl mx-auto px-4">

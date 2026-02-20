@@ -3,9 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom'; 
 import { ArrowRight, Zap, Clock } from 'lucide-react';
 
-export const HikingSlider = ({ slides }) => {
+export const HikingSlider = ({ slides, lang }) => {
   const { t } = useTranslation();
-  const { lang } = useParams();
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
