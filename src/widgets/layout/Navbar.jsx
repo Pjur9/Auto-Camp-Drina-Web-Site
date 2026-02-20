@@ -20,11 +20,15 @@ const ROUTE_MAP = {
   faq:      { en: '/en/faq', sr: '/sr/faq', de: '/de/faq' }
 };
 
-// Pomoćna funkcija koja prepoznaje "ključ" stranice na osnovu URL-a
+// POPRAVLJENO: Pomoćna funkcija sada ignoriše kosu crtu na kraju (trailing slash)
 const getCurrentPageKey = (pathname) => {
-  if (pathname === '/en' || pathname === '/sr' || pathname === '/de' || pathname === '/') return 'home';
+  // Ukloni kosu crtu sa kraja za potrebe poređenja (npr. /en/hiking/ -> /en/hiking)
+  const cleanPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+  
+  if (cleanPath === '/en' || cleanPath === '/sr' || cleanPath === '/de' || cleanPath === '/' || cleanPath === '') return 'home';
+  
   for (const [key, paths] of Object.entries(ROUTE_MAP)) {
-    if (Object.values(paths).includes(pathname)) return key;
+    if (Object.values(paths).includes(cleanPath)) return key;
   }
   return 'home';
 };
@@ -82,7 +86,6 @@ export const Navbar = ({ openBooking, isScrolled }) => {
   const currentLangObj = LANGUAGES.find(l => l.code === (lang || i18n.language)) || LANGUAGES[0];
   const currentLang = currentLangObj.code;
 
-  // Nova, pametna funkcija za promjenu jezika
   const changeLanguage = (newLangCode) => {
     i18n.changeLanguage(newLangCode);
     const newUrl = ROUTE_MAP[currentPageKey][newLangCode];
@@ -98,11 +101,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
   };
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
@@ -123,6 +122,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
   const themeHoverText = isBikerPage ? 'hover:text-accent' : 'hover:text-secondary';
   const themeIndicator = isBikerPage ? 'bg-accent shadow-[0_0_8px_#ea580c]' : 'bg-secondary shadow-[0_0_8px_#2dd4bf]';
 
+  // POPRAVLJENO: Navbar je transparentan SAMO na Home stranici ako nismo skrolovali
   const navThemeClass = isScrolled || currentPageKey !== 'home' || isMobileMenuOpen 
     ? `${themeBg} shadow-lg` 
     : 'bg-transparent';
@@ -130,6 +130,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
   return (
     <nav className={`fixed w-full top-0 left-0 z-[100] transition-all duration-300 ${navThemeClass}`}>
       
+      {/* Top Bar */}
       <div className={`hidden lg:block transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'} border-b border-white/5`}>
         <div className="max-w-7xl mx-auto px-8 flex justify-end items-center gap-6 text-white text-xs font-medium">
           <div className="relative">
@@ -165,6 +166,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
         </div>
       </div>
 
+      {/* Main Bar */}
       <div className={`transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
           <Link 
@@ -176,6 +178,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
             <div className="leading-none">AUTO CAMP <br/> <span className={themeAccentText}>DRINA</span></div>
           </Link>
 
+          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-8 text-white text-sm font-bold tracking-widest">
             {DESKTOP_LINKS.map((link) => {
               if (link.type === 'dropdown') {
@@ -226,7 +229,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button onClick={() => openBooking()} className="hidden lg:block bg-accent px-6 py-2.5 rounded font-bold text-white hover:opacity-90 transition transform hover:scale-105 shadow-lg shadow-orange-900/20 uppercase text-[10px] tracking-widest">
+            <button onClick={() => openBooking()} className="hidden lg:block bg-accent px-6 py-2.5 rounded font-bold text-white hover:opacity-90 transition transform hover:scale-105 shadow-lg uppercase text-[10px] tracking-widest">
               {t('navbar.bookBtn')}
             </button>
             <button className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -236,6 +239,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className={`lg:hidden ${themeBg} px-4 pb-20 animate-fade-in fixed top-[64px] left-0 right-0 bottom-0 z-[100] overflow-y-auto shadow-2xl border-t border-white/5 transition-colors duration-500`}>
           <div className="flex flex-col gap-1 pt-6">
