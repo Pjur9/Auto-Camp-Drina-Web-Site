@@ -71,6 +71,7 @@ const FAQPage = ({ openBooking, openQuestion }) => {
             const isActive = activeCategory === cat.id;
             return (
               <button
+                aria-label={t(`faq.categories.${cat.id}`, 'Kategorija')}
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
                 className={`flex items-center gap-3 px-8 py-4 rounded-2xl text-sm font-black uppercase tracking-widest transition-all duration-300 border-2
@@ -96,7 +97,8 @@ const FAQPage = ({ openBooking, openQuestion }) => {
                     isOpen ? 'border-secondary/20 shadow-2xl translate-x-2' : 'border-gray-50 hover:border-secondary/20 shadow-sm'
                   }`}
                 >
-                  <button 
+                  <button
+                    aria-label='Item FAQ'
                     onClick={() => toggleItem(item.id)}
                     className="w-full flex justify-between items-center p-7 text-left focus:outline-none"
                   >
@@ -144,6 +146,7 @@ const FAQPage = ({ openBooking, openQuestion }) => {
               </p>
               
               <Button 
+                aria-label={t('faq.contactUs', 'Kontaktirajte nas')}
                 variant="primary" 
                 onClick={openQuestion} 
                 className="bg-accent hover:bg-accent-hover text-white border-none 

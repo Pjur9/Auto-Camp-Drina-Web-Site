@@ -95,7 +95,7 @@ export const CreateModal = ({ isOpen, onClose, selectedIds, totalPrice, activiti
                         <p className="text-accent text-lg md:text-xl font-bold leading-tight">
                             {t('multiDay.modal.summary')}
                         </p>
-                        <button onClick={handleClose} className="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors">
+                        <button aira-label="Close" onClick={handleClose} className="absolute top-5 right-5 text-gray-400 hover:text-white transition-colors">
                             <X size={22} />
                         </button>
                     </div>
@@ -158,6 +158,7 @@ export const CreateModal = ({ isOpen, onClose, selectedIds, totalPrice, activiti
                             </div>
 
                             <button 
+                                aria-label="WhatsApp"
                                 onClick={handleWhatsApp}
                                 className="w-full bg-[#25D366] text-white py-3.5 md:py-4 rounded-2xl font-black flex items-center justify-center gap-2.5 md:gap-3 hover:scale-[1.01] transition-all shadow-lg active:scale-95 text-sm md:text-base"
                             >
@@ -165,6 +166,7 @@ export const CreateModal = ({ isOpen, onClose, selectedIds, totalPrice, activiti
                             </button>
                             
                             <button 
+                                aria-label="Email"
                                 onClick={handleEmail}
                                 disabled={isSending}
                                 className="w-full bg-primary text-white py-3.5 md:py-4 rounded-2xl font-black flex items-center justify-center gap-2.5 md:gap-3 hover:scale-[1.01] transition-all shadow-lg active:scale-95 text-sm md:text-base"
@@ -193,7 +195,9 @@ export const CreateModal = ({ isOpen, onClose, selectedIds, totalPrice, activiti
                         {t('multiDay.modal.successText', 'Tvoj upit je uspešno poslat. Naš tim će te kontaktirati u najkraćem roku.')}
                     </p>
 
-                    <Button onClick={handleClose} className="w-full py-3.5 md:py-4 rounded-2xl font-black text-sm md:text-base shadow-xl">
+                    <Button
+                        aria-label={t('common.close', 'Zatvori')}
+                       onClick={handleClose} className="w-full py-3.5 md:py-4 rounded-2xl font-black text-sm md:text-base shadow-xl">
                         {t('common.close', 'Zatvori')}
                     </Button>
                     

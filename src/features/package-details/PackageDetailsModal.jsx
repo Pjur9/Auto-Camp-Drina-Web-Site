@@ -93,6 +93,7 @@ export const PackageDetailsModal = ({ isOpen, onClose, pkg }) => {
           {t('common.likePlan')}
         </p>
         <Button 
+          aria-label={t('common.bookThisPackage')}
           onClick={handleBookClick} 
           className="w-full sm:w-auto shadow-lg"
         >

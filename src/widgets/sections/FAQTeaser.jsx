@@ -56,7 +56,8 @@ export const FAQTeaser = ({ category = 'all', lang }) => {
                   isOpen ? 'border-secondary shadow-md' : 'border-gray-200 hover:border-secondary/30'
                 }`}
               >
-                <button 
+                <button
+                  aria-label='toggle' 
                   onClick={() => toggleItem(item.id)}
                   className="w-full flex justify-between items-start p-5 text-left focus:outline-none group"
                 >

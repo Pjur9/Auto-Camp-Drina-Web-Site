@@ -22,7 +22,8 @@ export const Button = ({
   const variantStyle = variants[variant] || variants.primary;
 
   return (
-    <button 
+    <button
+      aria-label='Button'
       type={type}
       onClick={disabled ? undefined : onClick} 
       className={`${baseStyle} ${variantStyle} ${className}`}

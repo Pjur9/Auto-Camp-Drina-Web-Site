@@ -213,7 +213,8 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
                     </div>
 
                     <div className="mt-12 text-center relative z-10">
-                        <Button 
+                        <Button
+                            aria-label={t('multiDay.package5day.cta', 'Package 5 day')} 
                             onClick={openBooking} 
                             className="relative bg-accent hover:bg-orange-500 text-white rounded-full shadow-xl shadow-accent/20 transition-all hover:scale-105 px-8 py-4 text-lg font-bold md:px-16 md:py-6 md:text-xl md:font-black"
                         >
@@ -325,7 +326,8 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
                                         </div>
                                     </div>
                                     
-                                    <Button 
+                                    <Button
+                                        aria-label={t('multiDay.builder.cta', 'MultiDay Builder')}
                                         onClick={() => setIsCreateOpen(true)} 
                                         className="w-full justify-center bg-dark text-white hover:bg-accent py-4 rounded-xl font-black shadow-lg text-sm transition-all transform hover:-translate-y-0.5 active:scale-95"
                                     >
@@ -411,7 +413,8 @@ const MultiDayPage = ({ openBooking, openQuestion }) => {
                                     </p>
                                 </div>
                                 <div className="relative z-10 shrink-0">
-                                    <Button 
+                                    <Button
+                                        aria-label={t('multiDay.scouts.cta', 'MultiDay Scouts')}
                                         onClick={openQuestion} 
                                         className="bg-primary hover:bg-primary-light hover:text-dark text-white px-12 py-6 rounded-2xl font-black text-sm shadow-2xl transition-all flex items-center gap-3 group"
                                     >

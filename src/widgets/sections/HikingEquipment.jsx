@@ -21,7 +21,8 @@ export const HikingEquipment = ({ openBooking, openQuestion }) => {
             {t('hikingEquipment.ctaText')}
           </p>
 
-          <Button 
+          <Button
+            aria-label={t('hikingEquipment.ctaButton')} 
             variant="primary" 
             className="self-center md:self-start bg-accent hover:bg-accent-hover text-white border-none shadow-lg shadow-orange-900/20" 
             onClick={openQuestion}
