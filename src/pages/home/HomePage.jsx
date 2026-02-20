@@ -82,7 +82,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
 
           <div className="text-center mt-12">
             <Link to={`/${currentLang}/rafting`}>
-              <Button variant="primary">
+              <Button aria-label={t('home.viewAllOffers', 'View all offers')} variant="primary">
                 {t('home.viewAllOffers')}
               </Button>
             </Link>
@@ -166,7 +166,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
                 to={`/${currentLang}/aboutus`}
                 aria-label={t('aboutUs.ariaLabel', 'Read more about Auto Camp Drina tradition and host family')}
               >
-                <Button className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-xl flex items-center gap-2 transition-all w-full md:w-auto justify-center">
+                <Button aria-label={t('aboutUs.readMore', 'Read more')} className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-xl flex items-center gap-2 transition-all w-full md:w-auto justify-center">
                   {t('common.readMore')} <ArrowRight size={18} />
                 </Button>
               </Link>
@@ -201,7 +201,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
               </div>
 
               <Link to={`/${currentLang}/hiking`}>
-                <Button variant="ghost" className="px-6 text-secondary hover:text-white hover:bg-white/10">
+                <Button aria-label={t('home.allTours', 'See all tours')} variant="ghost" className="px-6 text-secondary hover:text-white hover:bg-white/10">
                   {t('home.allTours')}
                 </Button>
               </Link>

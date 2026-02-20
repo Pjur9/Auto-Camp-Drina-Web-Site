@@ -99,7 +99,8 @@ export const HomeHero = ({ openBooking, lang }) => {
                   className="w-full sm:w-auto"
                   aria-label={t('hero.raftingLinkAria', 'Explore our rafting packages and adventures')}
                 >
-                    <Button 
+                    <Button
+                        aria-label={t('hero.explore', 'Explore')}
                         variant="primary" 
                         className="shadow-lg shadow-accent/20 hover:shadow-accent/40 transform hover:-translate-y-1 w-full justify-center"
                     >
@@ -112,7 +113,8 @@ export const HomeHero = ({ openBooking, lang }) => {
                   className="w-full sm:w-auto"
                   aria-label={t('hero.campingLinkAria', 'View camping accommodation and facilities')}
                 >
-                    <Button 
+                    <Button
+                        aria-label={t('hero.campBtn', 'Camp')}
                         variant="outline" 
                         className="border-white text-white hover:bg-white hover:text-primary-dark shadow-lg backdrop-blur-sm w-full justify-center" 
                     >
@@ -127,7 +129,7 @@ export const HomeHero = ({ openBooking, lang }) => {
                         key={index} 
                         onClick={(e) => { e.stopPropagation(); setCurrentSlide(index); }} 
                         className={`transition-all duration-300 rounded-full shadow-sm ${index === currentSlide ? 'w-8 h-2 bg-accent' : 'w-2 h-2 bg-white/50 hover:bg-white'}`}
-                        aria-label={`Slide ${index + 1}`}
+                        aria-label={t(`Slide ${index + 1}`, 'Slide')}
                     />
                 ))}
             </div>

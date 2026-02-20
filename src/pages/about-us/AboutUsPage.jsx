@@ -120,7 +120,7 @@ const AboutUsPage = ({ openBooking, lang }) => {
               </Trans>
             </p>
             <Link to={`/${currentLang}/rafting`}>
-              <Button>
+              <Button aria-label={t('aboutUsPage.story2.button')}>
                 {t('aboutUsPage.story2.button')} <ArrowRight size={20} className="ml-2" />
               </Button>
             </Link>

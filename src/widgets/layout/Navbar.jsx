@@ -134,14 +134,14 @@ export const Navbar = ({ openBooking, isScrolled }) => {
       <div className={`hidden lg:block transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'} border-b border-white/5`}>
         <div className="max-w-7xl mx-auto px-8 flex justify-end items-center gap-6 text-white text-xs font-medium">
           <div className="relative">
-            <button onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className={`flex items-center gap-2 transition focus:outline-none ${themeHoverText}`}>
+            <button aria-label='Country flag' onClick={() => setIsLangMenuOpen(!isLangMenuOpen)} className={`flex items-center gap-2 transition focus:outline-none ${themeHoverText}`}>
               <img src={getFlagUrl(currentLangObj.country_code)} alt={currentLangObj.label} className="w-5 h-auto rounded-sm" />
               <ChevronDown size={14} />
             </button>
             {isLangMenuOpen && (
               <div className={`absolute top-full right-0 mt-2 ${isBikerPage ? 'bg-[#1c1917]' : 'bg-primary-dark'} border border-white/10 rounded-lg shadow-xl py-1 w-32 z-50`}>
                 {LANGUAGES.map((l) => (
-                  <button key={l.code} onClick={() => changeLanguage(l.code)} className={`flex items-center gap-3 w-full px-4 py-2 text-sm hover:bg-white/10 transition ${currentLang === l.code ? themeAccentText : 'text-white'}`}>
+                  <button aria-label={t(`Change language to ${l.label}`, 'Change language')} key={l.code} onClick={() => changeLanguage(l.code)} className={`flex items-center gap-3 w-full px-4 py-2 text-sm hover:bg-white/10 transition ${currentLang === l.code ? themeAccentText : 'text-white'}`}>
                     <img src={getFlagUrl(l.country_code)} alt={l.label} className="w-5 h-auto rounded-sm" />
                     <span>{l.label}</span>
                   </button>
@@ -154,7 +154,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
             <Phone size={14} className={themeAccentText} /> <span>{SITE_DATA.general.phone}</span>
           </a>
 
-          <button onClick={handleCopyEmail} className={`flex items-center gap-2 transition focus:outline-none ${themeHoverText} ${emailCopied ? 'text-green-400' : ''}`}>
+          <button aria-label='Copy email' onClick={handleCopyEmail} className={`flex items-center gap-2 transition focus:outline-none ${themeHoverText} ${emailCopied ? 'text-green-400' : ''}`}>
             {emailCopied ? <BadgeCheck size={14} className="text-green-400" /> : <Mail size={14} className={themeAccentText} />} 
             <span>{emailCopied ? t('navbar.copied') : SITE_DATA.general.email}</span>
           </button>
@@ -185,7 +185,8 @@ export const Navbar = ({ openBooking, isScrolled }) => {
                 const isAnySubActive = link.subLinks.includes(currentPageKey);
                 return (
                   <div key={link.id} className="relative group" ref={activitiesRef}>
-                    <button 
+                    <button
+                      aria-label={t(`navbar.${link.id}`, 'Activities')} 
                       onClick={() => setIsActivitiesOpen(!isActivitiesOpen)}
                       className={`flex items-center gap-1 hover:text-secondary transition py-2 ${isAnySubActive || isActivitiesOpen ? themeAccentText : ''}`}
                     >
@@ -229,10 +230,10 @@ export const Navbar = ({ openBooking, isScrolled }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <button onClick={() => openBooking()} className="hidden lg:block bg-accent px-6 py-2.5 rounded font-bold text-white hover:opacity-90 transition transform hover:scale-105 shadow-lg uppercase text-[10px] tracking-widest">
+            <button aria-label="Book Now" onClick={() => openBooking()} className="hidden lg:block bg-accent px-6 py-2.5 rounded font-bold text-white hover:opacity-90 transition transform hover:scale-105 shadow-lg uppercase text-[10px] tracking-widest">
               {t('navbar.bookBtn')}
             </button>
-            <button className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <button aria-label="Mobile Menu" className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <X size={24} /> : <BookOpen size={24} />}
             </button>
           </div>
@@ -261,7 +262,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
           <div className="mt-8 pt-8 border-t border-white/10 flex flex-col gap-10">
             <div className="flex justify-center gap-6">
               {LANGUAGES.map((l) => (
-                <button key={l.code} onClick={() => changeLanguage(l.code)} className={`p-4 rounded-2xl transition-all ${currentLang === l.code ? 'bg-white/20 scale-110 shadow-lg' : 'bg-white/5 opacity-60'}`}>
+                <button aria-label='Country Language code' key={l.code} onClick={() => changeLanguage(l.code)} className={`p-4 rounded-2xl transition-all ${currentLang === l.code ? 'bg-white/20 scale-110 shadow-lg' : 'bg-white/5 opacity-60'}`}>
                   <img src={getFlagUrl(l.country_code)} alt={l.label} className="w-8 h-auto rounded-sm" />
                 </button>
               ))}
@@ -275,7 +276,7 @@ export const Navbar = ({ openBooking, isScrolled }) => {
               <MobileActionLink href={EXTERNAL_LINKS.google} icon={GoogleIcon} label="Google" isBiker={isBikerPage} />
               <MobileActionLink href={EXTERNAL_LINKS.tripAdvisor} icon={TripAdvisorIcon} label="Trip" isBiker={isBikerPage} />
             </div>
-            <button onClick={() => { openBooking(); setIsMobileMenuOpen(false); }} className="w-full bg-accent py-6 rounded-2xl font-black text-white uppercase text-base shadow-2xl shadow-orange-900/40 tracking-widest active:scale-95 transition-transform">
+            <button aria-label="Book Now" onClick={() => { openBooking(); setIsMobileMenuOpen(false); }} className="w-full bg-accent py-6 rounded-2xl font-black text-white uppercase text-base shadow-2xl shadow-orange-900/40 tracking-widest active:scale-95 transition-transform">
               {t('navbar.bookBtn')}
             </button>
           </div>

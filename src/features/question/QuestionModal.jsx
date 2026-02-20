@@ -97,7 +97,8 @@ export const QuestionModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              <button 
+              <button
+                aria-label={t('booking.labels.send')} 
                 type="submit" 
                 disabled={isSending}
                 className={`w-full text-white font-bold py-4 rounded-lg transition shadow-lg mt-4 flex items-center justify-center gap-2 uppercase tracking-widest text-sm
@@ -122,7 +123,7 @@ export const QuestionModal = ({ isOpen, onClose }) => {
                 {t('multiDay.modal.successText')}
             </p>
 
-            <Button onClick={handleClose} className="w-full py-4 rounded-2xl font-black shadow-lg">
+            <Button aria-label={t('common.close')} onClick={handleClose} className="w-full py-4 rounded-2xl font-black shadow-lg">
                 {t('common.close')}
             </Button>
             

@@ -159,7 +159,7 @@ const AccommodationCard = ({ title, desc, image, features, badge, onBook, bookBt
           </li>
         ))}
       </ul>
-      <Button variant="primary" className="w-full justify-center" onClick={onBook}>
+      <Button aria-label={"BookButton"} variant="primary" className="w-full justify-center" onClick={onBook}>
         {bookBtnText}
       </Button>
     </div>

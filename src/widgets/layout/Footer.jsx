@@ -235,7 +235,8 @@ const FooterLink = ({ to, label, currentPath }) => (
 const ContactItem = ({ icon: Icon, label, accentClass, onClick, isCopied }) => (
   <li className="flex items-center gap-2 justify-center md:justify-start">
     <Icon size={16} className={accentClass} /> 
-    <button 
+    <button
+      aria-label='Contact' 
       onClick={onClick} 
       className={`hover:text-white transition focus:outline-none ${isCopied ? 'text-green-400 font-bold' : ''}`}
     >

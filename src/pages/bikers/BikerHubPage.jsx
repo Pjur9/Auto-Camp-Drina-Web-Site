@@ -130,7 +130,8 @@ const BikerHubPage = ({ openBooking }) => {
                             {t('bikerHub.hero.description')}
                         </p>
 
-                        <Button 
+                        <Button
+                            aria-label={t('bikerHub.hero.button')} 
                             onClick={openBooking}
                             className="bg-orange-600 hover:bg-[#2dd4bf] text-white px-8 py-3 rounded-none font-bold text-sm uppercase tracking-widest transition-all border-b-4 border-black/20"
                         >

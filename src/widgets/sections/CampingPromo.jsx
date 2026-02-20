@@ -54,14 +54,16 @@ export const CampingPromo = ({ openBooking, lang }) => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to={`/${lang}/camping`} className="w-full sm:w-auto">
-                <Button 
+                <Button
+                  aria-label={t('common.viewAll')} 
                   className="w-full sm:w-auto px-8 bg-accent hover:bg-accent-hover text-white"
                 >
                   {t('common.viewAll')}
                 </Button>
               </Link>
               
-              <Button 
+              <Button
+                aria-label={t('common.bookAccommodation')} 
                 variant="secondary" 
                 onClick={() => openBooking('Smještaj / Kamp')} 
                 className="w-full sm:w-auto px-8 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
