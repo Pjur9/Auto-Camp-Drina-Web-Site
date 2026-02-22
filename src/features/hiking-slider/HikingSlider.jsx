@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom'; 
 import { ArrowRight, Zap, Clock } from 'lucide-react';
-
+import { ROUTE_MAP } from '../../shared/config/routes';
 export const HikingSlider = ({ slides, lang }) => {
   const { t } = useTranslation();
   
@@ -88,7 +88,7 @@ export const HikingSlider = ({ slides, lang }) => {
                   </div>
                   
                   <Link 
-                    to={`/${lang}/hiking`}
+                    to={ROUTE_MAP['hiking'][lang]}
                     onClick={(e) => e.stopPropagation()} 
                     className="text-accent font-bold text-sm flex items-center gap-1 hover:text-accent-hover transition-colors"
                   >

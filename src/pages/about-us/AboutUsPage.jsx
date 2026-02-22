@@ -11,6 +11,7 @@ import { Container } from '../../shared/ui/Container';
 import { Button } from '../../shared/ui/Button';
 import { CountUp } from '../../shared/ui/CountUp';
 import { StandardSlider } from '../../features/slider/Slider';
+import { ROUTE_MAP } from '../../shared/config/routes';
 
 const EXTERNAL_LINKS = [
     { name: "Park4Night", url: "https://park4night.com/en/place/26159"},
@@ -119,7 +120,7 @@ const AboutUsPage = ({ openBooking, lang }) => {
                 <strong className="text-primary" />
               </Trans>
             </p>
-            <Link to={`/${currentLang}/rafting`}>
+            <Link to={ROUTE_MAP['rafting'][currentLang]}>
               <Button aria-label={t('aboutUsPage.story2.button')}>
                 {t('aboutUsPage.story2.button')} <ArrowRight size={20} className="ml-2" />
               </Button>
@@ -208,7 +209,7 @@ const AboutUsPage = ({ openBooking, lang }) => {
             </ul>
 
             <Link 
-              to={`/${currentLang}/hiking`}
+              to={ROUTE_MAP['hiking'][currentLang]}
               className="text-accent font-bold text-lg hover:text-orange-700 transition inline-flex items-center gap-2 group border-b-2 border-accent pb-1"
             >
               {t('aboutUsPage.story3.button')} 

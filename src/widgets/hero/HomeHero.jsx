@@ -3,7 +3,7 @@ import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../../shared/ui/Button';
-
+import { ROUTE_MAP } from '../../shared/config/routes';
 export const HomeHero = ({ openBooking, lang }) => {
   const { t } = useTranslation();
   const slides = t('hero.slides', { returnObjects: true });
@@ -95,7 +95,7 @@ export const HomeHero = ({ openBooking, lang }) => {
         <div className="pointer-events-auto z-20 flex flex-col gap-4 w-full items-center flex-none mb-4">
             <div className="flex flex-col sm:flex-row gap-3 justify-center w-full">
                 <Link 
-                  to={`/${lang}/rafting`} 
+                  to={ROUTE_MAP['rafting'][lang]} 
                   className="w-full sm:w-auto"
                   aria-label={t('hero.raftingLinkAria', 'Explore our rafting packages and adventures')}
                 >
@@ -109,7 +109,7 @@ export const HomeHero = ({ openBooking, lang }) => {
                 </Link>
 
                 <Link 
-                  to={`/${lang}/camping`} 
+                  to={ROUTE_MAP['camping'][lang]} 
                   className="w-full sm:w-auto"
                   aria-label={t('hero.campingLinkAria', 'View camping accommodation and facilities')}
                 >

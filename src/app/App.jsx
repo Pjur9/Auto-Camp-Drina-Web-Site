@@ -213,7 +213,8 @@ function App() {
         <PackageDetailsModal 
           isOpen={detailsModalOpen} 
           onClose={() => setDetailsModalOpen(false)} 
-          pkg={detailsPackage} 
+          pkg={detailsPackage}
+          openBooking={openBooking}
         />
         <QuestionModal 
           isOpen={questionModalOpen} 

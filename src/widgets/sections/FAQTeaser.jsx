@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import { faqItems } from '../../entities/faq/faqData';
+import { ROUTE_MAP } from '../../shared/config/routes';
 
 export const FAQTeaser = ({ category = 'all', lang }) => {
   const { t } = useTranslation();
@@ -92,7 +93,7 @@ export const FAQTeaser = ({ category = 'all', lang }) => {
 
         <div className="text-center">
           <Link 
-            to={`/${currentLang}/faq`}
+            to={ROUTE_MAP['faq'][lang]} 
             onClick={() => window.scrollTo(0, 0)}
             className="text-primary font-bold hover:text-accent transition inline-flex items-center justify-center gap-2 mx-auto group border-b-2 border-transparent hover:border-accent pb-1"
           >

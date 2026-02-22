@@ -9,16 +9,7 @@ import { SITE_DATA } from '../../entities/general/model/site-data';
 import { Modal } from '../../shared/ui/Modal';
 
 // Mapa svih naših lokalizovanih URL-ova
-const ROUTE_MAP = {
-  home:     { en: '/en', sr: '/sr', de: '/de' },
-  rafting:  { en: '/en/rafting', sr: '/sr/rafting', de: '/de/rafting' },
-  hiking:   { en: '/en/hiking', sr: '/sr/planinarenje', de: '/de/wandern' },
-  camping:  { en: '/en/camping', sr: '/sr/kampovanje', de: '/de/camping' },
-  multiday: { en: '/en/multiday', sr: '/sr/visednevni', de: '/de/mehrtagestouren' },
-  aboutus:  { en: '/en/aboutus', sr: '/sr/o-nama', de: '/de/ueber-uns' },
-  bikerhub: { en: '/en/bikerhub', sr: '/sr/motociklisti', de: '/de/motorrad' },
-  faq:      { en: '/en/faq', sr: '/sr/faq', de: '/de/faq' }
-};
+import { ROUTE_MAP } from '../../shared/config/routes';
 
 // Pomoćna funkcija koja prepoznaje "ključ" stranice na osnovu URL-a
 const getCurrentPageKey = (pathname) => {

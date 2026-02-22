@@ -4,15 +4,15 @@ import { X, Activity, CheckCircle } from 'lucide-react';
 import { Modal } from '../../shared/ui/Modal';
 import { Button } from '../../shared/ui/Button';
 
-export const PackageDetailsModal = ({ isOpen, onClose, pkg }) => {
+export const PackageDetailsModal = ({ isOpen, onClose, pkg, openBooking }) => {
   const { t } = useTranslation();
 
   if (!pkg) return null;
 
   const handleBookClick = () => {
     onClose();
-    if (window.openBooking) {
-      window.openBooking(pkg.title);
+    if (openBooking) {
+      openBooking(pkg.title);
     }
   };
 

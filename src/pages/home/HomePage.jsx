@@ -16,6 +16,7 @@ import { PackageCard } from '../../entities/package/ui/PackageCard';
 import { Button } from '../../shared/ui/Button';
 import { CountUp } from '../../shared/ui/CountUp'; 
 
+import { ROUTE_MAP } from '../../shared/config/routes';
 const HomePage = ({ openBooking, openDetails, lang }) => {
   const { t } = useTranslation(); 
   const raftingPackages = t('packages.rafting', { returnObjects: true });
@@ -81,7 +82,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to={`/${currentLang}/rafting`}>
+            <Link to={ROUTE_MAP['rafting'][currentLang]}>
               <Button aria-label={t('home.viewAllOffers', 'View all offers')} variant="primary">
                 {t('home.viewAllOffers')}
               </Button>
@@ -163,7 +164,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
               </div>
 
               <Link 
-                to={`/${currentLang}/aboutus`}
+                to={ROUTE_MAP['aboutus'][currentLang]}
                 aria-label={t('aboutUs.ariaLabel', 'Read more about Auto Camp Drina tradition and host family')}
               >
                 <Button aria-label={t('aboutUs.readMore', 'Read more')} className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-xl flex items-center gap-2 transition-all w-full md:w-auto justify-center">
@@ -200,7 +201,7 @@ const HomePage = ({ openBooking, openDetails, lang }) => {
                 <FeatureRow icon={Car} title={t('home.offRoadTransport')} subtitle={t('home.offRoadTransportDesc')} />
               </div>
 
-              <Link to={`/${currentLang}/hiking`}>
+              <Link to={ROUTE_MAP['hiking'][currentLang]}>
                 <Button aria-label={t('home.allTours', 'See all tours')} variant="ghost" className="px-6 text-secondary hover:text-white hover:bg-white/10">
                   {t('home.allTours')}
                 </Button>
