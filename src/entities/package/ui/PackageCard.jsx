@@ -18,7 +18,7 @@ export const PackageCard = memo(({
   onToggle = () => {} 
 }) => {
   const { t } = useTranslation();
-  const { lang } = useParams();
+
 
   if (layout === 'vertical') {
     return (
@@ -63,8 +63,7 @@ export const PackageCard = memo(({
           <p className="text-gray-600 text-sm mb-6 line-clamp-3">{item.description}</p>
           
           <div className="mt-auto pt-4 border-t border-gray-50 flex flex-col gap-2">
-            {type === 'hiking' ? (
-               !isItineraryOpen && (
+            {type === 'hiking' && (
                 <Button 
                 variant="outline" 
                 className="w-full !text-secondary !border-secondary hover:!bg-primary hover:!text-white flex justify-center items-center gap-2" 
@@ -77,17 +76,7 @@ export const PackageCard = memo(({
                 <BookOpen size={16} aria-hidden="true" /> {isItineraryOpen ? t('common.closePlan') : t('common.planTour')}
                 {isItineraryOpen ? <ChevronUp size={16} aria-hidden="true" /> : <ChevronDown size={16} aria-hidden="true" />}
               </Button>
-               )
-            ) : (
-              <Button 
-                variant="outline" 
-                aria-label={t('common.planTour')}
-                className="w-full !text-secondary !border-secondary hover:!bg-gray-50 hover:!text-primary" 
-                onClick={() => onShowDetails(item)}
-              >
-                {t('common.planTour')}
-              </Button>
-            )}
+            ) }
 
             <Button
               aria-label={t('common.bookAdventure')} 
@@ -136,17 +125,6 @@ export const PackageCard = memo(({
                 <p>Itinerary details coming soon...</p>
               </div>
             )}
-          </div>
-
-          <div className="p-4 border-t border-gray-100 bg-white shrink-0">
-            <Button 
-              variant="outline" 
-              className="w-full justify-center border-secondary text-secondary hover:bg-secondary hover:text-white"
-              aria-label={t('common.closePlanAria', 'Close tour itinerary overlay')}
-              onClick={onToggle}
-            >
-              {t('common.closePlan')} 
-            </Button>
           </div>
         </div>
       </div>
