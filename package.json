@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-     "dev": "vite",
-      "build": "PUPPETEER_CACHE_DIR=/opt/build/repo/.cache/puppeteer vite build",
-      "lint": "eslint .",
-      "preview": "vite preview",
-      "postinstall": "PUPPETEER_CACHE_DIR=/opt/build/repo/.cache/puppeteer npx puppeteer browsers install chrome"
+    "dev": "vite",
+    "build": "PUPPETEER_CACHE_DIR=/opt/build/repo/.cache/puppeteer vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "postinstall": "PUPPETEER_CACHE_DIR=/opt/build/repo/.cache/puppeteer npx puppeteer browsers install chrome"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -17,6 +17,7 @@
     "lucide-react": "^0.555.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-ga4": "^2.1.0",
     "react-helmet-async": "^2.0.5",
     "react-i18next": "^16.3.5",
     "react-icons": "^5.5.0",

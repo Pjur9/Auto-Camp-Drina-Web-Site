@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { SITE_DATA } from '../entities/general/model/site-data';
-
+import Analytics from './Analytics';
 import { Navbar } from '../widgets/layout/Navbar';
 import { Footer } from '../widgets/layout/Footer';
 import { BookingModal } from '../features/booking/BookingModal';
@@ -17,6 +17,7 @@ const CampingPage = lazy(() => import('../pages/camping/CampingPage'));
 const MultiDayPage = lazy(() => import('../pages/multiple-day/MultiDayPage'));
 const AboutUsPage = lazy(() => import('../pages/about-us/AboutUsPage'));
 const BikerHubPage = lazy(() => import('../pages/bikers/BikerHubPage'));
+const ThankYouPage = lazy(() => import('../pages/thankyou/ThankYouPage'));
 const FAQPage = lazy(() => import('../pages/faq/FAQPage'));
 
 
@@ -154,6 +155,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <Analytics />
         <ScrollToTop />
         <Routes>
           {/* Default redirekcija sa root domena na engleski jezik */}
@@ -170,6 +172,7 @@ function App() {
             <Route path="multiday" element={<PageLayout lang="en" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="aboutus" element={<PageLayout lang="en" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="en" openBooking={openBooking} /></PageLayout>} />
             <Route path="bikerhub" element={<PageLayout lang="en" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="thank-you" element={<PageLayout lang="en" pageKey="thankyou" openBooking={openBooking}><ThankYouPage /></PageLayout>} />
             <Route path="faq" element={<PageLayout lang="en" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
           </Route>
 
@@ -184,6 +187,7 @@ function App() {
             <Route path="visednevni" element={<PageLayout lang="sr" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="o-nama" element={<PageLayout lang="sr" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="sr" openBooking={openBooking} /></PageLayout>} />
             <Route path="motociklisti" element={<PageLayout lang="sr" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="hvala" element={<PageLayout lang="sr" pageKey="thankyou" openBooking={openBooking}><ThankYouPage /></PageLayout>} />
             <Route path="faq" element={<PageLayout lang="sr" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
           </Route>
 
@@ -198,6 +202,7 @@ function App() {
             <Route path="mehrtagestouren" element={<PageLayout lang="de" pageKey="multiday" openBooking={openBooking}><MultiDayPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
             <Route path="ueber-uns" element={<PageLayout lang="de" pageKey="aboutus" openBooking={openBooking}><AboutUsPage lang="de" openBooking={openBooking} /></PageLayout>} />
             <Route path="motorrad" element={<PageLayout lang="de" pageKey="bikerhub" openBooking={openBooking}><BikerHubPage openBooking={openBooking} /></PageLayout>} />
+            <Route path="danke" element={<PageLayout lang="de" pageKey="thankyou" openBooking={openBooking}><ThankYouPage /></PageLayout>} />
             <Route path="faq" element={<PageLayout lang="de" pageKey="faq" openBooking={openBooking}><FAQPage openBooking={openBooking} openQuestion={openQuestion} /></PageLayout>} />
           </Route>
 
