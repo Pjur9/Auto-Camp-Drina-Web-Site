@@ -20,15 +20,15 @@ export default defineConfig({
           
           // --- SRPSKI ---
           '/sr', '/sr/rafting', '/sr/planinarenje', '/sr/kampovanje', 
-          '/sr/visednevni', '/sr/o-nama', '/sr/motociklisti', '/sr/faq',
+          '/sr/visednevni', '/sr/o-nama', '/sr/motociklisti', '/sr/faq', '/sr/hvala',
 
           // --- ENGLESKI ---
           '/en', '/en/rafting', '/en/hiking', '/en/camping', 
-          '/en/multiday', '/en/aboutus', '/en/bikerhub', '/en/faq',
+          '/en/multiday', '/en/aboutus', '/en/bikerhub', '/en/faq', '/en/thank-you',
 
           // --- NJEMAČKI ---
           '/de', '/de/rafting', '/de/wandern', '/de/camping', 
-          '/de/mehrtagestouren', '/de/ueber-uns', '/de/motorrad', '/de/faq'
+          '/de/mehrtagestouren', '/de/ueber-uns', '/de/motorrad', '/de/faq',  '/de/danke'
         ],
         renderer: new PuppeteerRenderer({
           // Dajemo Reactu 1.5 sekundu vremena da povuče jezik i naslove prije slikanja

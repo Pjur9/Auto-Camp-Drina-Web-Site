@@ -102,6 +102,11 @@ const resources = {
             rv: "Your RV/Van/Jeep/Other"
         }
       },
+      thankYou: {
+          title: "Thank You!",
+          message: "Your request has been successfully sent. Our team will get back to you as soon as possible.",
+          backHome: "Back to Home"
+      },
       contact: {
         title: "Ask a Question",
         subtitle: "Have a doubt? Write to us and we will get back to you as soon as possible.",
@@ -1028,6 +1033,11 @@ const resources = {
             tent: "Vaš šator",
             rv: "Vaš Kamper/Kombi/Džip"
         }
+      },
+      thankYou: {
+          title: "Hvala Vam!",
+          message: "Vaš upit je uspješno poslat. Naš tim će Vam odgovoriti u najkraćem mogućem roku.",
+          backHome: "Nazad na početnu"
       },
       contact: {
         title: "Postavite Pitanje",
@@ -1976,6 +1986,11 @@ const resources = {
           tent: "Ihr eigenes Zelt",
           rv: "Ihr Wohnmobil/Van/Jeep/Sonstiges"
         }
+      },
+      thankYou: {
+          title: "Vielen Dank!",
+          message: "Ihre Anfrage wurde erfolgreich gesendet. Unser Team wird sich so schnell wie möglich bei Ihnen melden.",
+          backHome: "Zurück zur Startseite"
       },
       "contact": {
         title: "Frage stellen",

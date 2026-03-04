@@ -7,10 +7,13 @@ import {
 } from 'lucide-react';
 import { Modal, ModalHeader } from '../../shared/ui/Modal';
 import { Button } from '../../shared/ui/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 export const BookingModal = ({ isOpen, onClose, preselectedPackage }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const formRef = useRef();
+  const navigate = useNavigate();
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -31,6 +34,13 @@ export const BookingModal = ({ isOpen, onClose, preselectedPackage }) => {
       .then(() => {
         setIsSuccess(true);
         e.target.reset();
+        if (i18n.language === 'sr') {
+            navigate('/sr/hvala');
+        } else if (i18n.language === 'de') {
+            navigate('/de/danke');
+        } else {
+            navigate('/en/thank-you');
+        }
       })
       .catch((error) => {
         console.error('EmailJS Error:', error);
